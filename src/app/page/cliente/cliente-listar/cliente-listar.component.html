@@ -1,0 +1,45 @@
+<div class="mat-headline demo-table" style="text-align: center; font-size: 4rem; padding-top: 1rem; margin-block: 2rem; font-weight: bolder; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">CLIENTES</div>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8" style="margin:auto; width:50rem;">
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- ID Column -->
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> ID </th>
+    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="nameCliente">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.nameCliente}} </td>
+  </ng-container>
+
+  <!-- Email Column -->
+  <ng-container matColumnDef="emailCliente">
+    <th mat-header-cell *matHeaderCellDef> Email </th>
+    <td mat-cell *matCellDef="let element"> {{element.emailCliente}} </td>
+  </ng-container>
+
+  <!-- Clave Column -->
+  <ng-container matColumnDef="claveCliente">
+    <th mat-header-cell *matHeaderCellDef> Clave </th>
+    <td mat-cell *matCellDef="let element"> {{element.claveCliente}} </td>
+  </ng-container>
+
+  <!-- Telefono Column -->
+  <ng-container matColumnDef="telefonoCliente">
+    <th mat-header-cell *matHeaderCellDef> Telefono </th>
+    <td mat-cell *matCellDef="let element"> {{element.telefonoCliente}} </td>
+  </ng-container>
+
+  <!-- Vehiculo Column -->
+  <ng-container matColumnDef="vehiculoCliente">
+    <th mat-header-cell *matHeaderCellDef> Vehiculo </th>
+    <td mat-cell *matCellDef="let element"> {{element.vehiculoCliente}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
