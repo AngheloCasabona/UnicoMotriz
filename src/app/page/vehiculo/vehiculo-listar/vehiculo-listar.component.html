@@ -1,0 +1,43 @@
+<p>vehiculo-listar works!</p>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="codeVehiculo">
+    <th mat-header-cell *matHeaderCellDef> No. </th>
+    <td mat-cell *matCellDef="let element"> {{element.codeVehiculo}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="license">
+    <th mat-header-cell *matHeaderCellDef> Placa </th>
+    <td mat-cell *matCellDef="let element"> {{element.licensePlateVehiculo}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="DAno">
+    <th mat-header-cell *matHeaderCellDef> Fecha </th>
+    <td mat-cell *matCellDef="let element"> {{element.DAno}} </td>
+  </ng-container>
+  <ng-container matColumnDef="cliente">
+    <th mat-header-cell *matHeaderCellDef> Fecha </th>
+    <td mat-cell *matCellDef="let element"> {{element.cliente.nameCliente}} </td>
+  </ng-container>
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="NMarca">
+      <th mat-header-cell *matHeaderCellDef> No. </th>
+      <td mat-cell *matCellDef="let element"> {{element.NMarca}} </td>
+    </ng-container>
+
+      <!-- Position Column -->
+  <ng-container matColumnDef="NModelo">
+    <th mat-header-cell *matHeaderCellDef> No. </th>
+    <td mat-cell *matCellDef="let element"> {{element.NModelo}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

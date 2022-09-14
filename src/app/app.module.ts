@@ -7,11 +7,15 @@ import { ClienteComponent } from './page/cliente/cliente.component';
 import { ClienteListarComponent } from './page/cliente/cliente-listar/cliente-listar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from "@angular/material/table";
+import { VehiculoComponent } from './page/vehiculo/vehiculo.component';
+import { VehiculoListarComponent } from './page/vehiculo/vehiculo-listar/vehiculo-listar.component';
 @NgModule({
   declarations: [
     AppComponent,
     ClienteComponent,
-    ClienteListarComponent
+    ClienteListarComponent,
+    VehiculoComponent,
+    VehiculoListarComponent
   ],
   imports: [
     BrowserModule,
