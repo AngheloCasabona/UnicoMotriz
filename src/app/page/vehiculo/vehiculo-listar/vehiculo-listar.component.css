@@ -1,0 +1,51 @@
+.demo-table {
+  width: 100%;
+}
+
+
+.mat-cell{
+  background-color: #fcfcfc;
+
+}
+.mat-column-id {
+  width: 32px;
+  border-right: 1px solid currentColor;
+  padding-right: 24px;
+  text-align: center;
+  font-weight: bolder;
+  background-color: #cfcfcf;
+}
+
+.mat-column-nameCliente {
+  padding-left: 16px;
+  font-size: 16px;
+}
+
+.mat-column-emailCliente {
+  font-style: italic;
+
+}
+
+.mat-column-claveCliente {
+  font-style: italic;
+}
+
+.mat-column-telefonoCliente {
+  font-style: italic;
+}
+
+.mat-column-vehiculoCliente {
+  width: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.mat-header-cell {
+  background-color: #303030;
+  color: #ffffff;
+  font-style: normal;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}

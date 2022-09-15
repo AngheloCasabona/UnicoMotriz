@@ -8,7 +8,6 @@
           emailCliente: "luisa@gmail.com",
           claveCliente: "1234567",
           telefonoCliente: "950000123",
-          vehiculoCliente: "POO138",
         },
         {
           id: 2,
@@ -16,7 +15,6 @@
           emailCliente: "daniel@gmail.com",
           claveCliente: "1111111",
           telefonoCliente: "963852741",
-          vehiculoCliente: "P34TI5",
         },
         {
           id: 3,
@@ -24,7 +22,6 @@
           emailCliente: "tejon@gmail.com",
           claveCliente: "7654321",
           telefonoCliente: "936145728",
-          vehiculoCliente: "DY4TRI",
         },
         {
           id: 4,
@@ -32,21 +29,62 @@
           emailCliente: "capibara@gmail.com",
           claveCliente: "1233214",
           telefonoCliente: "951746328",
-          vehiculoCliente: "PUB123",
         },
       ],
       vehiculos:[
         {
-          codeVehiculo: "MDF-845",
+          codeVehiculo: "MDF845",
           DAno:"2022-09-09",
           cliente:{
-            id:2,
+            id: 2,
+            nameCliente: "Daniel",
+            emailCliente: "daniel@gmail.com",
+            claveCliente: "1111111",
+            telefonoCliente: "963852741",
           },
           NMarca:"Toyota",
           NModelo:"Subaru",
-        }
+        },
+        {
+          codeVehiculo: "P34TI5",
+          DAno:"2012-09-02",
+          cliente:{
+            id: 4,
+            nameCliente: "Capibara",
+            emailCliente: "capibara@gmail.com",
+            claveCliente: "1233214",
+            telefonoCliente: "951746328",
+          },
+          NMarca:"Hyundai",
+          NModelo:"XR1",
+        },
+        {
+          codeVehiculo: "POO138",
+          DAno:"2011-01-16",
+          cliente:{
+            id: 1,
+            nameCliente: "Luisa",
+            emailCliente: "luisa@gmail.com",
+            claveCliente: "1234567",
+            telefonoCliente: "950000123",
+          },
+          NMarca:"Porsche",
+          NModelo:"SportTX",
+        },
+        {
+          codeVehiculo: "PUB123",
+          DAno:"2014-11-11",
+          cliente:{
+            id: 3,
+            nameCliente: "Tejon",
+            emailCliente: "tejon@gmail.com",
+            claveCliente: "7654321",
+            telefonoCliente: "936145728",
+          },
+          NMarca:"Toyota",
+          NModelo:"Carina",
+        },
       ]
-
     }
 
     return data

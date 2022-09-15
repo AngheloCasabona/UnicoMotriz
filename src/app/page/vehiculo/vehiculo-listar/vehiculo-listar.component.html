@@ -1,19 +1,13 @@
-<p>vehiculo-listar works!</p>
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+<div class="mat-headline demo-table" style="text-align: center; font-size: 4rem; padding-top: 1rem; margin-block: 2rem; font-weight: bolder; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">VEHICULOS</div>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8" style="margin:auto; width:50rem;">
 
   <!--- Note that these columns can be defined in any order.
           The actual rendered columns are set as a property on the row definition" -->
 
   <!-- Position Column -->
   <ng-container matColumnDef="codeVehiculo">
-    <th mat-header-cell *matHeaderCellDef> No. </th>
-    <td mat-cell *matCellDef="let element"> {{element.codeVehiculo}} </td>
-  </ng-container>
-
-  <!-- Name Column -->
-  <ng-container matColumnDef="license">
     <th mat-header-cell *matHeaderCellDef> Placa </th>
-    <td mat-cell *matCellDef="let element"> {{element.licensePlateVehiculo}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.codeVehiculo}} </td>
   </ng-container>
 
   <!-- Weight Column -->
@@ -21,21 +15,22 @@
     <th mat-header-cell *matHeaderCellDef> Fecha </th>
     <td mat-cell *matCellDef="let element"> {{element.DAno}} </td>
   </ng-container>
-  <ng-container matColumnDef="cliente">
-    <th mat-header-cell *matHeaderCellDef> Fecha </th>
-    <td mat-cell *matCellDef="let element"> {{element.cliente.nameCliente}} </td>
-  </ng-container>
 
     <!-- Position Column -->
     <ng-container matColumnDef="NMarca">
-      <th mat-header-cell *matHeaderCellDef> No. </th>
+      <th mat-header-cell *matHeaderCellDef> Marca </th>
       <td mat-cell *matCellDef="let element"> {{element.NMarca}} </td>
     </ng-container>
 
       <!-- Position Column -->
   <ng-container matColumnDef="NModelo">
-    <th mat-header-cell *matHeaderCellDef> No. </th>
+    <th mat-header-cell *matHeaderCellDef> Modelo </th>
     <td mat-cell *matCellDef="let element"> {{element.NModelo}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="cliente">
+    <th mat-header-cell *matHeaderCellDef> Cliente </th>
+    <td mat-cell *matCellDef="let element"> {{element.cliente.nameCliente}} </td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
