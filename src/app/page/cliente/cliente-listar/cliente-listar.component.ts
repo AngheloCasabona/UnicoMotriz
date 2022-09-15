@@ -9,7 +9,7 @@ import { MatTableDataSource } from "@angular/material/table";
 })
 export class ClienteListarComponent implements OnInit {
   dataSource:MatTableDataSource<Cliente>=new MatTableDataSource();
-  displayedColumns: string[]=['id', 'nameCliente', 'emailCliente', 'claveCliente', 'telefonoCliente', 'vehiculoCliente'];
+  displayedColumns: string[]=['id', 'nameCliente', 'emailCliente', 'claveCliente', 'telefonoCliente'];
   constructor(private ps:ClienteService) { }
 
   ngOnInit(): void {

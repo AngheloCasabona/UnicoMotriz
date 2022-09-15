@@ -11,7 +11,7 @@ import { Vehiculo } from 'src/app/model/vehiculo';
 })
 export class VehiculoListarComponent implements OnInit {
   dataSource: MatTableDataSource<Vehiculo> = new MatTableDataSource();
-  displayedColumns:string[]=['codeVehiculo', `DAno`, `cliente`, `NMarca`, `NModelo`];
+  displayedColumns:string[]=['codeVehiculo', `DAno`, `NMarca`, `NModelo`, `cliente`];
   constructor(private vs:VehiculoService) { }
 
   ngOnInit(): void {
