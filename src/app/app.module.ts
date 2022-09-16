@@ -13,6 +13,10 @@ import { MecanicoComponent } from './page/mecanico/mecanico.component';
 import { MecanicoListarComponent } from './page/mecanico/mecanico-listar/mecanico-listar.component';
 import { TallerComponent } from './page/taller/taller.component';
 import { TallerListarComponent } from './page/taller/taller-listar/taller-listar.component';
+import { ReservaComponent } from './page/reserva/reserva.component';
+import { ReservaListarComponent } from './page/reserva/reserva-listar/reserva-listar.component';
+import { HistorialComponent } from './page/historial/historial.component';
+import { HistorialListarComponent } from './page/historial/historial-listar/historial-listar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +27,11 @@ import { TallerListarComponent } from './page/taller/taller-listar/taller-listar
     MecanicoComponent,
     MecanicoListarComponent,
     TallerComponent,
-    TallerListarComponent
+    TallerListarComponent,
+    ReservaComponent,
+    ReservaListarComponent,
+    HistorialComponent,
+    HistorialListarComponent
   ],
   imports: [
     BrowserModule,
