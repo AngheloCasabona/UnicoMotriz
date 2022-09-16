@@ -1,0 +1,40 @@
+.demo-table {
+  width: 100%;
+}
+
+
+.mat-cell{
+  background-color: #fcfcfc;
+
+}
+.mat-column-Reserva {
+  width: 32px;
+  border-right: 1px solid currentColor;
+  padding-right: 24px;
+  text-align: center;
+  font-weight: bolder;
+  background-color: #cfcfcf;
+}
+
+.mat-column-Descripcion {
+  padding-left: 16px;
+  font-size: 16px;
+  width: 9rem;
+  text-align: center;
+}
+
+.mat-column-Historial {
+  font-style: italic;
+  width: 12rem;
+  text-align: center;
+}
+
+.mat-header-cell {
+  background-color: #303030;
+  color: #ffffff;
+  font-style: normal;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
