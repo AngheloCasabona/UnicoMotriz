@@ -1,8 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Reserva } from './../../../model/reserva';
 import { MatTableDataSource } from '@angular/material/table';
-import { Reserva } from 'src/app/model/reserva';
+import { Component, OnInit } from '@angular/core';
 import { ReservaService } from 'src/app/service/reserva.service';
-
 @Component({
   selector: 'app-reserva-listar',
   templateUrl: './reserva-listar.component.html',

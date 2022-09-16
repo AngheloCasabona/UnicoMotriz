@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { MatTableDataSource } from '@angular/material/table';
-import { Historial } from 'src/app/model/historial';
 import { HistorialService } from 'src/app/service/historial.service';
-
+import { MatTableDataSource } from '@angular/material/table'
+import { Historial } from 'src/app/model/historial';
 @Component({
   selector: 'app-historial-listar',
   templateUrl: './historial-listar.component.html',
