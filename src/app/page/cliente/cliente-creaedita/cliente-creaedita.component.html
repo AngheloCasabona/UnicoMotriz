@@ -5,26 +5,38 @@
 
   <mat-form-field class="example-full-width">
     <mat-label>Id</mat-label>
-    <input matInput placeholder="Id" [(ngModel)]="cliente.id">
+    <input matInput placeholder="id" [(ngModel)]="cliente.id">
   </mat-form-field>
 
   <br>
 
   <mat-form-field class="example-full-width">
     <mat-label>Nombre</mat-label>
-    <input matInput required placeholder="name" [(ngModel)]="cliente.nameCliente">
+    <input matInput required placeholder="nameCliente" [(ngModel)]="cliente.nameCliente">
 
   </mat-form-field>
 
   <br>
   <mat-form-field class="example-full-width">
     <mat-label>Email</mat-label>
-    <input type="email" matInput required placeholder="email" [(ngModel)]="cliente.emailCliente">
+    <input type="email" matInput required placeholder="emailCliente" [(ngModel)]="cliente.emailCliente">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Clave</mat-label>
+    <input type="text" matInput required placeholder="claveCliente" [(ngModel)]="cliente.claveCliente">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Telefono</mat-label>
+    <input type="text" matInput required placeholder="telefonoCliente" [(ngModel)]="cliente.telefonoCliente">
   </mat-form-field>
 
   <br>
   <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
-  <button mat-raised-button color="warn" routerLink="/propietarios">Cancelar</button>
+  <button mat-raised-button color="warn" routerLink="/clientes">Cancelar</button>
   <p>{{mensaje}}</p>
 
 </div>
