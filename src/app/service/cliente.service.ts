@@ -1,14 +1,25 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { Cliente } from '../model/cliente';
+import { Subject } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
 export class ClienteService {
   url:string = "http://localhost:5000/clientes";
+  private listaCambio = new Subject<Cliente[]>()
   constructor(private http:HttpClient) { }
 
   listar(){
     return this.http.get<Cliente[]>(this.url);
+  }
+  insertar(cliente: Cliente){
+    return this.http.post(this.url, cliente);
+  }
+  setLista(ListaNueva: Cliente[]){
+    this.listaCambio.next(ListaNueva);
+  }
+  getLista(){
+    return this.listaCambio.asObservable();
   }
 }

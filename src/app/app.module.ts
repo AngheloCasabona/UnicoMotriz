@@ -17,6 +17,11 @@ import { ReservaComponent } from './page/reserva/reserva.component';
 import { ReservaListarComponent } from './page/reserva/reserva-listar/reserva-listar.component';
 import { HistorialComponent } from './page/historial/historial.component';
 import { HistorialListarComponent } from './page/historial/historial-listar/historial-listar.component';
+import { ClienteCreaeditaComponent } from './page/cliente/cliente-creaedita/cliente-creaedita.component';
+import { MatInputModule } from "@angular/material/input";
+import { MatIconModule } from "@angular/material/icon";
+import { MatButtonModule } from "@angular/material/button";
+import { FormsModule } from "@angular/forms";
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,14 +36,20 @@ import { HistorialListarComponent } from './page/historial/historial-listar/hist
     ReservaComponent,
     ReservaListarComponent,
     HistorialComponent,
-    HistorialListarComponent
+    HistorialListarComponent,
+    ClienteCreaeditaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatTableModule
+    MatTableModule,
+    MatInputModule,
+    MatIconModule,
+    MatButtonModule,
+    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
