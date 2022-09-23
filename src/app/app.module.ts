@@ -1,3 +1,4 @@
+import { ClienteCreaeditaComponent } from './page/cliente/cliente-creaedita/cliente-creaedita.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from "@angular/common/http";
@@ -16,7 +17,7 @@ import { TallerListarComponent } from './page/taller/taller-listar/taller-listar
 import { ReservaComponent } from './page/reserva/reserva.component';
 import { ReservaListarComponent } from './page/reserva/reserva-listar/reserva-listar.component';
 
-import { TallerCreaeditaComponent } from './page/taller/taller-creaedita/taller-creaedita.component';
+
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import{MatIconModule} from'@angular/material/icon';
@@ -24,6 +25,7 @@ import { FormsModule } from '@angular/forms';
 import { FacturaComponent } from './page/factura/factura.component';
 import { FacturaListarComponent } from './page/factura/factura-listar/factura-listar.component';
 import { FacturaCreaeditaComponent } from './page/factura/factura-creaedita/factura-creaedita.component';
+import { TallerCreaeditaComponent } from './page/taller/taller-creaedita/taller-creaedita.component';
 
 
 @NgModule({
@@ -39,11 +41,15 @@ import { FacturaCreaeditaComponent } from './page/factura/factura-creaedita/fact
     TallerListarComponent,
     ReservaComponent,
     ReservaListarComponent,
+    ClienteCreaeditaComponent,
 
     TallerCreaeditaComponent,
     FacturaComponent,
     FacturaListarComponent,
-    FacturaCreaeditaComponent
+    FacturaCreaeditaComponent,
+
+
+
   ],
   imports: [
     BrowserModule,
@@ -52,13 +58,12 @@ import { FacturaCreaeditaComponent } from './page/factura/factura-creaedita/fact
     BrowserAnimationsModule,
     MatTableModule,
 
+
+
     MatInputModule,
-    FormsModule,
+    MatIconModule,
     MatButtonModule,
-    MatIconModule
-
-
-
+    FormsModule
 
   ],
   providers: [],

@@ -16,6 +16,9 @@ export class ClienteListarComponent implements OnInit {
     this.ps.listar().subscribe(data=>{
       this.dataSource=new MatTableDataSource(data);
     })
+    this.ps.getLista().subscribe(data => {
+      this.dataSource = new MatTableDataSource(data);
+    })
   }
 
 }

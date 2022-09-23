@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ClienteCreaeditaComponent } from './page/cliente/cliente-creaedita/cliente-creaedita.component';
 import { ClienteComponent } from './page/cliente/cliente.component';
 import { FacturaCreaeditaComponent } from './page/factura/factura-creaedita/factura-creaedita.component';
 import { FacturaComponent } from './page/factura/factura.component';
@@ -12,7 +13,7 @@ import { VehiculoComponent } from './page/vehiculo/vehiculo.component';
 const routes: Routes = [
   {
     path: 'clientes', component: ClienteComponent, children:[
-
+      {path: 'nuevo', component: ClienteCreaeditaComponent}
     ]
   },{
     path: 'vehiculos', component: VehiculoComponent, children:[
