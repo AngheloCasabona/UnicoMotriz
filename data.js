@@ -126,35 +126,35 @@
         }
 
       ],
-      historial: [
+      facturas: [
         {
-          CHistorial:1,
-          THistorial: "Texto-Prueba",
-          Reserva_CReserva: 1,
+          id:1,
+          DFecha: "2022-01-01",
+          Monto: 100,
         },
         {
-          CHistorial:2,
-          THistorial: "Texto-Prueba",
-          Reserva_CReserva: 2,
+          id:2,
+          DFecha: "2022-02-02",
+          Monto: 200,
         },
         {
-          CHistorial:3,
-          THistorial: "Texto-Prueba",
-          Reserva_CReserva: 3,
+          id:3,
+          DFecha: "2022-03-03",
+          Monto: 300,
         },
         {
-          CHistorial:4,
-          THistorial: "Texto-Prueba",
-          Reserva_CReserva: 4,
+          id:4,
+          DFecha: "2022-04-04",
+          Monto: 400,
 
         }
       ],
       reserva:[
         {
           CReserva:1,
-          TDetalle: "Reserva-Prueba",
-          historial:{
-            historial:3,
+          TDetalle: "Reserva 01",
+          factura:{
+            id: 3,
           }
         }
       ]

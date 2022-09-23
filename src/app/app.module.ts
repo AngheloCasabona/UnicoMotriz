@@ -15,8 +15,17 @@ import { TallerComponent } from './page/taller/taller.component';
 import { TallerListarComponent } from './page/taller/taller-listar/taller-listar.component';
 import { ReservaComponent } from './page/reserva/reserva.component';
 import { ReservaListarComponent } from './page/reserva/reserva-listar/reserva-listar.component';
-import { HistorialComponent } from './page/historial/historial.component';
-import { HistorialListarComponent } from './page/historial/historial-listar/historial-listar.component';
+
+import { TallerCreaeditaComponent } from './page/taller/taller-creaedita/taller-creaedita.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import{MatIconModule} from'@angular/material/icon';
+import { FormsModule } from '@angular/forms';
+import { FacturaComponent } from './page/factura/factura.component';
+import { FacturaListarComponent } from './page/factura/factura-listar/factura-listar.component';
+import { FacturaCreaeditaComponent } from './page/factura/factura-creaedita/factura-creaedita.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,15 +39,27 @@ import { HistorialListarComponent } from './page/historial/historial-listar/hist
     TallerListarComponent,
     ReservaComponent,
     ReservaListarComponent,
-    HistorialComponent,
-    HistorialListarComponent
+
+    TallerCreaeditaComponent,
+    FacturaComponent,
+    FacturaListarComponent,
+    FacturaCreaeditaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatTableModule
+    MatTableModule,
+
+    MatInputModule,
+    FormsModule,
+    MatButtonModule,
+    MatIconModule
+
+
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]

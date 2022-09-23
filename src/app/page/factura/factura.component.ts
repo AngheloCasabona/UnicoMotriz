@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-historial',
-  templateUrl: './historial.component.html',
-  styleUrls: ['./historial.component.css']
+  selector: 'app-factura',
+  templateUrl: './factura.component.html',
+  styleUrls: ['./factura.component.css']
 })
-export class HistorialComponent implements OnInit {
+export class FacturaComponent implements OnInit {
 
   constructor(public route:ActivatedRoute) { }
 

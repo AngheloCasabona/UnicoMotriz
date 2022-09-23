@@ -10,10 +10,12 @@ import { TallerService } from 'src/app/service/taller.service';
 })
 export class TallerListarComponent implements OnInit {
   dataSource:MatTableDataSource<Taller>=new MatTableDataSource();
-  displayedColumns:string[]=['id','name', 'address'];
+  displayedColumns:string[]=['id','name', 'address', 'acciones'];
   constructor(private ps: TallerService) { }
 
   ngOnInit(): void {
     this.ps.listar().subscribe(data=>{this.dataSource=new MatTableDataSource (data); })
-  }
+    this.ps.getLista().subscribe(data => {this.dataSource = new MatTableDataSource(data);
+  });
+}
 }

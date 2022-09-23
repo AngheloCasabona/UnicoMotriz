@@ -10,7 +10,7 @@ import { ReservaService } from 'src/app/service/reserva.service';
 })
 export class ReservaListarComponent implements OnInit {
   dataSource: MatTableDataSource<Reserva> = new MatTableDataSource();
-  displayedColumns:string[]=['Reserva','Descripcion','Historial'];
+  displayedColumns:string[]=['reserva','detalle','factura'];
   constructor(private Rs: ReservaService) { }
 
   ngOnInit(): void {

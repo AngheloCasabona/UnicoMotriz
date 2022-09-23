@@ -1,30 +1,27 @@
-
-
-
-
-<div class="mat-headline demo-table" style="text-align: center; font-size: 4rem; padding-top: 1rem; margin-block: 2rem; font-weight: bolder; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">TALLERES</div>
+<div class="mat-headline demo-table" style="text-align: center; font-size: 4rem; padding-top: 1rem; margin-block: 2rem; font-weight: bolder; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">FACTURA</div>
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" style="margin:auto; width:38rem;">
-  <h1>Lista de talleres</h1>
+
   <!--- Note that these columns can be defined in any order.
           The actual rendered columns are set as a property on the row definition" -->
 
   <!-- Position Column -->
   <ng-container matColumnDef="id">
-    <th mat-header-cell *matHeaderCellDef> No. </th>
+    <th mat-header-cell *matHeaderCellDef> C.Factura </th>
     <td mat-cell *matCellDef="let element"> {{element.id}} </td>
   </ng-container>
 
   <!-- Name Column -->
-  <ng-container matColumnDef="name">
-    <th mat-header-cell *matHeaderCellDef> Name </th>
-    <td mat-cell *matCellDef="let element"> {{element.nameTaller}} </td>
+  <ng-container matColumnDef="fecha">
+    <th mat-header-cell *matHeaderCellDef> Fecha </th>
+    <td mat-cell *matCellDef="let element"> {{element.DFecha}} </td>
   </ng-container>
 
   <!-- Weight Column -->
-  <ng-container matColumnDef="address">
-    <th mat-header-cell *matHeaderCellDef> Address </th>
-    <td mat-cell *matCellDef="let element"> {{element.addressTaller}} </td>
+  <ng-container matColumnDef="monto">
+    <th mat-header-cell *matHeaderCellDef> Monto </th>
+    <td mat-cell *matCellDef="let element"> {{element.Monto}} </td>
   </ng-container>
+
 
   <ng-container matColumnDef="acciones">
     <th mat-header-cell *matHeaderCellDef> Acciones </th>
@@ -33,8 +30,6 @@
     </td>
   </ng-container>
 
-
-
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
@@ -42,7 +37,7 @@
 <div class="example-button-container">
 
   <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
-    routerLink="/talleres/nuevo">
+    routerLink="/facturas/nuevo">
     <mat-icon>plus_one</mat-icon>
   </button>
 </div>

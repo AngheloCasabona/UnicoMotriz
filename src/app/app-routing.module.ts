@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ClienteComponent } from './page/cliente/cliente.component';
-import { HistorialComponent } from './page/historial/historial.component';
+import { FacturaCreaeditaComponent } from './page/factura/factura-creaedita/factura-creaedita.component';
+import { FacturaComponent } from './page/factura/factura.component';
 import { MecanicoComponent } from './page/mecanico/mecanico.component';
 import { ReservaComponent } from './page/reserva/reserva.component';
+import { TallerCreaeditaComponent } from './page/taller/taller-creaedita/taller-creaedita.component';
 import { TallerComponent } from './page/taller/taller.component';
 import { VehiculoComponent } from './page/vehiculo/vehiculo.component';
 
@@ -18,14 +20,18 @@ const routes: Routes = [
     ]
   },{
     path: 'talleres', component: TallerComponent, children:[
-
+      { path: 'nuevo', component: TallerCreaeditaComponent },
+      { path: 'edicion/:id', component: TallerCreaeditaComponent }
     ]
   },{
     path:'mecanicos',component: MecanicoComponent,children:[
 
     ]
   }, {
-    path:"historial", component: HistorialComponent, children:[]
+    path:"factura", component: FacturaComponent, children:[
+      { path: 'nuevo', component: FacturaCreaeditaComponent },
+      { path: 'edicion/:id', component: FacturaCreaeditaComponent }
+    ]
   },
   {
     path:"reserva", component:ReservaComponent, children:[]
