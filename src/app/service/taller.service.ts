@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { EMPTY, Subject } from 'rxjs';
 import { Taller } from '../model/taller';
 
 @Injectable({
@@ -38,5 +38,14 @@ export class TallerService {
   }
   setConfirmaEliminacion(estado: Boolean) {
     this.confirmaEliminacion.next(estado);
+  }
+
+
+  buscar(texto: string) {
+    if (texto.length != 0) {
+      return this.http.post<Taller[]>(`${this.url}/buscar`, texto.toLowerCase(), {
+      });
+    }
+    return EMPTY;
   }
 }
