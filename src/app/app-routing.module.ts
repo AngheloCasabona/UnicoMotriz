@@ -24,14 +24,16 @@ const routes: Routes = [
       { path: 'nuevo', component: TallerCreaeditaComponent },
       { path: 'edicion/:id', component: TallerCreaeditaComponent }
     ]
-  },{
-    path:'mecanicos',component: MecanicoComponent,children:[
+  },
 
-    ]
-  }, {
-    path:"factura", component: FacturaComponent, children:[
+ {
+    path:"facturas", component: FacturaComponent, children:[
       { path: 'nuevo', component: FacturaCreaeditaComponent },
       { path: 'edicion/:id', component: FacturaCreaeditaComponent }
+    ]
+  }, {
+    path:'mecanicos',component: MecanicoComponent,children:[
+
     ]
   },
   {

@@ -9,6 +9,7 @@ import { Taller } from '../model/taller';
 export class TallerService {
   url: string = "http://localhost:5000/talleres";
   private listaCambio = new Subject<Taller[]>()
+  private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http: HttpClient) { }
   listar() {
     return this.http.get<Taller[]>(this.url);
@@ -27,5 +28,15 @@ export class TallerService {
   }
   listarId(id: number) {
     return this.http.get<Taller>(`${this.url}/${id}`);
+  }
+
+  eliminar(id: number) {
+    return this.http.delete(this.url + "/" + id);
+  }
+  getConfirmaEliminacion() {
+    return this.confirmaEliminacion.asObservable();
+  }
+  setConfirmaEliminacion(estado: Boolean) {
+    this.confirmaEliminacion.next(estado);
   }
 }

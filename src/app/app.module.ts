@@ -26,6 +26,11 @@ import { FacturaComponent } from './page/factura/factura.component';
 import { FacturaListarComponent } from './page/factura/factura-listar/factura-listar.component';
 import { FacturaCreaeditaComponent } from './page/factura/factura-creaedita/factura-creaedita.component';
 import { TallerCreaeditaComponent } from './page/taller/taller-creaedita/taller-creaedita.component';
+import { FacturaDialogoComponent } from './page/factura/factura-listar/factura-dialogo/factura-dialogo.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { TallerDialogoComponent } from './page/taller/taller-listar/taller-dialogo/taller-dialogo.component';
+import { FacturaBuscarComponent } from './page/factura/factura-buscar/factura-buscar.component';
+import { TallerBuscarComponent } from './page/taller/taller-buscar/taller-buscar.component';
 
 
 @NgModule({
@@ -47,6 +52,10 @@ import { TallerCreaeditaComponent } from './page/taller/taller-creaedita/taller-
     FacturaComponent,
     FacturaListarComponent,
     FacturaCreaeditaComponent,
+    FacturaDialogoComponent,
+    TallerDialogoComponent,
+    FacturaBuscarComponent,
+    TallerBuscarComponent,
 
 
 
@@ -57,14 +66,11 @@ import { TallerCreaeditaComponent } from './page/taller/taller-creaedita/taller-
     HttpClientModule,
     BrowserAnimationsModule,
     MatTableModule,
-
-
-
     MatInputModule,
     MatIconModule,
     MatButtonModule,
-    FormsModule
-
+    FormsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

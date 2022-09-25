@@ -25,7 +25,7 @@ export class FacturaCreaeditaComponent implements OnInit {
   }
   aceptar(): void {
 
-    if (this.factura.DFecha.length  > 0) {
+    if (this.factura.DFecha.length  !> 0) {
       if (this.edicion) {
       this.facturaService.modificar(this.factura).subscribe(data => {
         this.facturaService.listar().subscribe(data => {

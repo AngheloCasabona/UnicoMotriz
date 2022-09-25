@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { Factura } from 'src/app/model/factura';
 import { FacturaService } from 'src/app/service/factura.service';
-
+import { MatDialog } from '@angular/material/dialog';
+import { FacturaDialogoComponent } from './factura-dialogo/factura-dialogo.component';
 @Component({
   selector: 'app-factura-listar',
   templateUrl: './factura-listar.component.html',
@@ -11,12 +12,29 @@ import { FacturaService } from 'src/app/service/factura.service';
 export class FacturaListarComponent implements OnInit {
 
   dataSource:MatTableDataSource<Factura>=new MatTableDataSource();
-  displayedColumns:string[]=['id','fecha', 'monto', 'acciones'];
-  constructor(private fs: FacturaService) { }
+  displayedColumns:string[]=['id','fecha', 'monto', 'acciones','acciones2'];
+  private idMayor: number = 0;
+
+  constructor(private fs: FacturaService,private dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.fs.listar().subscribe(data=>{this.dataSource=new MatTableDataSource (data); })
-    this.fs.getLista().subscribe(data => {this.dataSource = new MatTableDataSource(data);
-  });
+    this.fs.getLista().subscribe(data => {this.dataSource = new MatTableDataSource(data);});
+    this.fs.getConfirmaEliminacion().subscribe(data => { data == true? this.eliminar(this.idMayor) : false; });
 }
+
+confirmar(id: number) {
+  this.idMayor = id;
+  this.dialog.open(FacturaDialogoComponent);
+}
+eliminar(id: number) {
+  this.fs.eliminar(id).subscribe(() => {
+    this.fs.listar().subscribe(data => {
+      this.fs.setLista(data);/* se ejecuta la línea 27*/
+    });
+  });
+
+}
+
+
 }
