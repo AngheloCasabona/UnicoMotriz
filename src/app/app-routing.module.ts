@@ -35,7 +35,8 @@ const routes: Routes = [
   },
   {
     path: "productos", component: ProductoComponent, children:[
-      {path: 'nuevo', component: productoCreaeditaComponent}
+      {path: 'nuevo', component: productoCreaeditaComponent},
+      { path: 'edicion/:id', component: productoCreaeditaComponent }
     ]
   }
 ];

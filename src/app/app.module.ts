@@ -1,3 +1,5 @@
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { ProductoDialogoComponent } from './page/producto/producto-listar/producto-dialogo/producto-dialogo.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from "@angular/common/http";
@@ -43,7 +45,8 @@ import { productoCreaeditaComponent } from './page/producto/producto-creaedita/p
     ClienteCreaeditaComponent,
     ProductoComponent,
     ProductoListarComponent,
-    productoCreaeditaComponent
+    productoCreaeditaComponent,
+    ProductoDialogoComponent
   ],
   imports: [
     BrowserModule,
@@ -54,8 +57,8 @@ import { productoCreaeditaComponent } from './page/producto/producto-creaedita/p
     MatInputModule,
     MatIconModule,
     MatButtonModule,
-    FormsModule
-
+    FormsModule, 
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
