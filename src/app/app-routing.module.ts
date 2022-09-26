@@ -4,6 +4,8 @@ import { ClienteCreaeditaComponent } from './page/cliente/cliente-creaedita/clie
 import { ClienteComponent } from './page/cliente/cliente.component';
 import { HistorialComponent } from './page/historial/historial.component';
 import { MecanicoComponent } from './page/mecanico/mecanico.component';
+import { productoCreaeditaComponent } from './page/producto/producto-creaedita/producto-creaedita.component';
+import { ProductoComponent } from './page/producto/producto.component';
 import { ReservaComponent } from './page/reserva/reserva.component';
 import { TallerComponent } from './page/taller/taller.component';
 import { VehiculoComponent } from './page/vehiculo/vehiculo.component';
@@ -30,6 +32,11 @@ const routes: Routes = [
   },
   {
     path:"reserva", component:ReservaComponent, children:[]
+  },
+  {
+    path: "productos", component: ProductoComponent, children:[
+      {path: 'nuevo', component: productoCreaeditaComponent}
+    ]
   }
 ];
 

@@ -1,0 +1,36 @@
+
+<div class="container">
+
+  <h1>Producto</h1>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Id</mat-label>
+    <input matInput placeholder="id" [(ngModel)]="producto.id">
+  </mat-form-field>
+
+  <br>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Nombre</mat-label>
+    <input type="text" matInput required placeholder="nameProducto" [(ngModel)]="producto.nameProducto">
+
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Costo</mat-label>
+    <input matInput required placeholder="costoProducto" [(ngModel)]="producto.costoProducto">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Venta</mat-label>
+    <input matInput required placeholder="ventaProducto" [(ngModel)]="producto.ventaProducto">
+  </mat-form-field>
+
+  <br>
+  <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+  <button mat-raised-button color="warn" routerLink="/productos">Cancelar</button>
+  <p>{{mensaje}}</p>
+
+</div>

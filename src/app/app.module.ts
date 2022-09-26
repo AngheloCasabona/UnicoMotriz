@@ -22,6 +22,9 @@ import { MatInputModule } from "@angular/material/input";
 import { MatIconModule } from "@angular/material/icon";
 import { MatButtonModule } from "@angular/material/button";
 import { FormsModule } from "@angular/forms";
+import { ProductoComponent } from './page/producto/producto.component';
+import { ProductoListarComponent } from './page/producto/producto-listar/producto-listar.component';
+import { productoCreaeditaComponent } from './page/producto/producto-creaedita/producto-creaedita.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +40,10 @@ import { FormsModule } from "@angular/forms";
     ReservaListarComponent,
     HistorialComponent,
     HistorialListarComponent,
-    ClienteCreaeditaComponent
+    ClienteCreaeditaComponent,
+    ProductoComponent,
+    ProductoListarComponent,
+    productoCreaeditaComponent
   ],
   imports: [
     BrowserModule,
