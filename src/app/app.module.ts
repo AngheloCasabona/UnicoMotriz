@@ -27,6 +27,7 @@ import { FormsModule } from "@angular/forms";
 import { ProductoComponent } from './page/producto/producto.component';
 import { ProductoListarComponent } from './page/producto/producto-listar/producto-listar.component';
 import { productoCreaeditaComponent } from './page/producto/producto-creaedita/producto-creaedita.component';
+import { ProductoBuscarComponent } from './page/producto/producto-buscar/producto-buscar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +47,8 @@ import { productoCreaeditaComponent } from './page/producto/producto-creaedita/p
     ProductoComponent,
     ProductoListarComponent,
     productoCreaeditaComponent,
-    ProductoDialogoComponent
+    ProductoDialogoComponent, 
+    ProductoBuscarComponent
   ],
   imports: [
     BrowserModule,
