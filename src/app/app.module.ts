@@ -55,11 +55,9 @@ import { TallerBuscarComponent } from './page/taller/taller-buscar/taller-buscar
     FacturaDialogoComponent,
     TallerDialogoComponent,
     FacturaBuscarComponent,
-    TallerBuscarComponent,
-
-
-
+    TallerBuscarComponent
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
