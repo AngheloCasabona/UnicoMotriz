@@ -5,7 +5,7 @@
 
   <mat-form-field class="example-full-width">
     <mat-label>Id</mat-label>
-    <input matInput placeholder="Id" [(ngModel)]="taller.id">
+    <input matInput placeholder="id" [(ngModel)]="taller.id">
   </mat-form-field>
 
   <br>
@@ -19,8 +19,15 @@
   <br>
   <mat-form-field class="example-full-width">
     <mat-label>Address</mat-label>
-    <input type="email" matInput required placeholder="email" [(ngModel)]="taller.addressTaller">
+    <input type="address" matInput required placeholder="address" [(ngModel)]="taller.addressTaller">
   </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Ruc</mat-label>
+    <input type="ruc" matInput required placeholder="ruc" [(ngModel)]="taller.ruc">
+  </mat-form-field>
+
 
   <br>
   <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>

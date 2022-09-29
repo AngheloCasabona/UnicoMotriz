@@ -25,12 +25,14 @@ import { FormsModule } from '@angular/forms';
 import { FacturaComponent } from './page/factura/factura.component';
 import { FacturaListarComponent } from './page/factura/factura-listar/factura-listar.component';
 import { FacturaCreaeditaComponent } from './page/factura/factura-creaedita/factura-creaedita.component';
-import { TallerCreaeditaComponent } from './page/taller/taller-creaedita/taller-creaedita.component';
-import { FacturaDialogoComponent } from './page/factura/factura-listar/factura-dialogo/factura-dialogo.component';
-import { MatDialogModule } from '@angular/material/dialog';
-import { TallerDialogoComponent } from './page/taller/taller-listar/taller-dialogo/taller-dialogo.component';
 import { FacturaBuscarComponent } from './page/factura/factura-buscar/factura-buscar.component';
+import { FacturaDialogoComponent } from './page/factura/factura-listar/factura-dialogo/factura-dialogo.component';
+import { TallerCreaeditaComponent } from './page/taller/taller-creaedita/taller-creaedita.component';
 import { TallerBuscarComponent } from './page/taller/taller-buscar/taller-buscar.component';
+import { TallerDialogoComponent } from './page/taller/taller-listar/taller-dialogo/taller-dialogo.component';
+import { MatDialogModule } from '@angular/material/dialog';
+
+
 
 
 @NgModule({

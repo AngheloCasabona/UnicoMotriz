@@ -91,22 +91,26 @@
         {
           id:1,
           nameTaller: "TALLER 01",
-          addressTaller: "LIMA MTZ 1"
+          addressTaller: "LIMA MTZ 1",
+          ruc: 11,
         },
         {
           id:2,
           nameTaller: "TALLER 02",
           addressTaller: "LIMA MTZ 2",
+          ruc: 22,
         },
         {
           id:3,
           nameTaller: "TALLER 03",
           addressTaller: "LIMA MTZ 3",
+          ruc: 33,
         },
         {
           id:4,
           nameTaller: "TALLER 04",
           addressTaller: "LIMA MTZ 4",
+          ruc: 44,
 
         }
       ],
@@ -120,6 +124,7 @@
           taller:{
             id:2,
             nameTaller: "TALLER 02",
+            ruc:22,
 
 
           }
