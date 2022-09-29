@@ -38,3 +38,10 @@
   font-weight: 700;
   text-transform: uppercase;
 }
+
+.example-button-container{
+  text-align: center;
+  /* margin: auto; */
+  max-width: 720px;
+  margin-top: 10px;
+}
