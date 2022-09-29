@@ -10,6 +10,7 @@ export class TallerComponent implements OnInit {
 
   constructor(public route:ActivatedRoute) { }
 
+  
   ngOnInit(): void {
   }
 
