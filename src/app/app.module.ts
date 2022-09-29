@@ -58,7 +58,6 @@ import { TallerBuscarComponent } from './page/taller/taller-buscar/taller-buscar
     TallerBuscarComponent,
 
 
-
   ],
   imports: [
     BrowserModule,

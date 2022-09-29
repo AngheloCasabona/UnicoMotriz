@@ -12,7 +12,7 @@ import { TallerDialogoComponent } from './taller-dialogo/taller-dialogo.componen
 })
 export class TallerListarComponent implements OnInit {
   dataSource:MatTableDataSource<Taller>=new MatTableDataSource();
-  displayedColumns:string[]=['id','name', 'address', 'acciones','acciones2'];
+  displayedColumns:string[]=['id','name', 'address','ruc', 'modify','delete'];
   private idMayor: number = 0;
   constructor(private ps: TallerService, private dialog: MatDialog) { }
 
