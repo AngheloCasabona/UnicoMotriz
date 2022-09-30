@@ -32,6 +32,7 @@ import { TallerBuscarComponent } from './page/taller/taller-buscar/taller-buscar
 import { TallerDialogoComponent } from './page/taller/taller-listar/taller-dialogo/taller-dialogo.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ClienteDialogoComponent } from './page/cliente/cliente-listar/cliente-dialogo/cliente-dialogo.component';
+import { ClienteBuscarComponent } from './page/cliente/cliente-buscar/cliente-buscar.component';
 
 
 
@@ -59,7 +60,8 @@ import { ClienteDialogoComponent } from './page/cliente/cliente-listar/cliente-d
     TallerDialogoComponent,
     FacturaBuscarComponent,
     TallerBuscarComponent,
-    ClienteDialogoComponent
+    ClienteDialogoComponent,
+    ClienteBuscarComponent
   ],
 
   imports: [
