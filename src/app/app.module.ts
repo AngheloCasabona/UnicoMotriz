@@ -70,7 +70,8 @@ import { ProductoBuscarComponent } from './page/producto/producto-buscar/product
     ProductoListarComponent,
     productoCreaeditaComponent,
     ProductoDialogoComponent,
-    ProductoBuscarComponent
+    ProductoBuscarComponent,
+    ProductoComponent
   ],
 
   imports: [
