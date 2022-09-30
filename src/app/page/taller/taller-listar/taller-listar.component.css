@@ -60,6 +60,6 @@
 .example-button-container{
   text-align: center;
   /* margin: auto; */
-  max-width: 720px;
-  margin-top: 10px;
+  max-width: auto;
+  margin-top: 15px;
 }
