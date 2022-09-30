@@ -1,4 +1,5 @@
 import { ClienteCreaeditaComponent } from './page/cliente/cliente-creaedita/cliente-creaedita.component';
+import { ProductoDialogoComponent } from './page/producto/producto-listar/producto-dialogo/producto-dialogo.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from "@angular/common/http";
@@ -37,6 +38,10 @@ import { ClienteBuscarComponent } from './page/cliente/cliente-buscar/cliente-bu
 
 
 
+import { ProductoComponent } from './page/producto/producto.component';
+import { ProductoListarComponent } from './page/producto/producto-listar/producto-listar.component';
+import { productoCreaeditaComponent } from './page/producto/producto-creaedita/producto-creaedita.component';
+import { ProductoBuscarComponent } from './page/producto/producto-buscar/producto-buscar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,7 +66,11 @@ import { ClienteBuscarComponent } from './page/cliente/cliente-buscar/cliente-bu
     FacturaBuscarComponent,
     TallerBuscarComponent,
     ClienteDialogoComponent,
-    ClienteBuscarComponent
+    ClienteBuscarComponent,
+    ProductoListarComponent,
+    productoCreaeditaComponent,
+    ProductoDialogoComponent,
+    ProductoBuscarComponent
   ],
 
   imports: [

@@ -166,7 +166,28 @@
             id: 3,
           }
         }
-      ]
+      ],
+      Productos:[
+        { id: 1,
+          nameProducto: "Faja",
+          costoProducto: 28,
+          ventaProducto: 44,
+        },
+        {id: 2,
+          nameProducto: "Bujia",
+          costoProducto: 30,
+          ventaProducto: 38,
+        },
+        {id: 3,
+          nameProducto: "Filtro de aire",
+          costoProducto: 150,
+          ventaProducto: 186,
+        },
+        {id: 4,
+          nameProducto: "Radiador",
+          costoProducto: 240,
+          ventaProducto: 285,
+      }]
     }
 
     return data
