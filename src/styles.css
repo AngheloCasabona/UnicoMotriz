@@ -2,3 +2,33 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.main-nav{
+  display: flex;
+  align-items: right;
+  flex-direction: row-reverse;
+  padding: 20px;
+  margin-top:0px;
+  list-style:none;
+  padding-left:0;
+  background-color:#ffffff
+}
+
+.main-nav__item a{
+  background-color: #848484;
+  padding: 10px;
+  padding-inline: 15px;
+  margin-right: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+  color:#fff;
+  text-decoration:none;
+  transition: .4s ease-in-out all;
+}
+
+.main-nav__item a:hover{
+  background-color: #4a80de;
+  border-radius: 30px;
+  transition: .4s ease-in-out all;
+}
+
