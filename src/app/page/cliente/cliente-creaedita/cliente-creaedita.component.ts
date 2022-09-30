@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Cliente } from 'src/app/model/cliente';
 import { ClienteService } from 'src/app/service/cliente.service';
 
@@ -11,21 +11,45 @@ import { ClienteService } from 'src/app/service/cliente.service';
 export class ClienteCreaeditaComponent implements OnInit {
   cliente: Cliente = new Cliente();
   mensaje: string = "";
-  constructor(private clienteService: ClienteService, private router: Router) { }
+  edicion: boolean = false;
+  id: number = 0;
+
+  constructor(private clienteService: ClienteService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.route.params.subscribe((data: Params) => {
+      this.id = data['id'];
+      this.edicion = data['id'] != null;
+      this.init();
+    })
   }
 
   aceptar(): void {
     if (this.cliente.nameCliente.length > 0 && this.cliente.emailCliente.length > 0 && this.cliente.claveCliente.length > 0 && this.cliente.telefonoCliente.length > 0 && this.cliente.rucCliente.length > 0) {
-      this.clienteService.insertar(this.cliente).subscribe(data=> {
-        this.clienteService.listar().subscribe(data =>{
-          this.clienteService.setLista(data);
+      if(this.edicion){
+        this.clienteService.modificar(this.cliente).subscribe(data => {
+          this.clienteService.listar().subscribe(data =>{
+            this.clienteService.setLista(data);
+          })
         })
-      })
+      } else {
+        this.clienteService.insertar(this.cliente).subscribe(data=> {
+          this.clienteService.listar().subscribe(data =>{
+            this.clienteService.setLista(data);
+          })
+        })
+      }
       this.router.navigate(['clientes']);
     } else {
       this.mensaje = "Completar los valores solicitados";
+    }
+  }
+
+  init(){
+    if(this.edicion){
+      this.clienteService.listarId(this.id).subscribe(data => {
+        this.cliente = data;
+      })
     }
   }
 

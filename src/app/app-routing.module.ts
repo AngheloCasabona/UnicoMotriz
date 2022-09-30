@@ -13,7 +13,8 @@ import { VehiculoComponent } from './page/vehiculo/vehiculo.component';
 const routes: Routes = [
   {
     path: 'clientes', component: ClienteComponent, children:[
-      {path: 'nuevo', component: ClienteCreaeditaComponent}
+      { path: 'nuevo', component: ClienteCreaeditaComponent },
+      { path: 'edicion/:id', component: ClienteCreaeditaComponent }
     ]
   },{
     path: 'vehiculos', component: VehiculoComponent, children:[
