@@ -4,4 +4,5 @@ export class Cliente{
   emailCliente: string = "";
   claveCliente: string = "";
   telefonoCliente: string = "";
+  rucCliente: string = "";
 }

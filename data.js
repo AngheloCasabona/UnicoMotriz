@@ -8,6 +8,7 @@
           emailCliente: "luisa@gmail.com",
           claveCliente: "1234567",
           telefonoCliente: "950000123",
+          rucCliente: "12345678910",
         },
         {
           id: 2,
@@ -15,6 +16,7 @@
           emailCliente: "daniel@gmail.com",
           claveCliente: "1111111",
           telefonoCliente: "963852741",
+          rucCliente: "12345678911",
         },
         {
           id: 3,
@@ -22,6 +24,7 @@
           emailCliente: "tejon@gmail.com",
           claveCliente: "7654321",
           telefonoCliente: "936145728",
+          rucCliente: "12345678912",
         },
         {
           id: 4,
@@ -29,6 +32,7 @@
           emailCliente: "capibara@gmail.com",
           claveCliente: "1233214",
           telefonoCliente: "951746328",
+          rucCliente: "12345678913",
         },
       ],
 

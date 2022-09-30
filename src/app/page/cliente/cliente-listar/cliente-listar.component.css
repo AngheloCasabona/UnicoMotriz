@@ -42,8 +42,14 @@
   text-align: center;
 }
 
+.mat-column-rucCliente {
+  font-style: italic;
+  width: 9rem;
+  text-align: center;
+}
+
 .mat-header-cell {
-  background-color: #6f1717;
+  background-color: #2b2b2b;
   color: #ffffff;
   font-style: normal;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
