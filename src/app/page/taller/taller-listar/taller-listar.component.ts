@@ -5,6 +5,7 @@ import { Taller } from 'src/app/model/taller';
 import { TallerService } from 'src/app/service/taller.service';
 import { TallerDialogoComponent } from './taller-dialogo/taller-dialogo.component';
 
+
 @Component({
   selector: 'app-taller-listar',
   templateUrl: './taller-listar.component.html',
@@ -12,7 +13,7 @@ import { TallerDialogoComponent } from './taller-dialogo/taller-dialogo.componen
 })
 export class TallerListarComponent implements OnInit {
   dataSource:MatTableDataSource<Taller>=new MatTableDataSource();
-  displayedColumns:string[]=['id','name', 'address', 'acciones','acciones2'];
+  displayedColumns:string[]=['id','name', 'address','ruc', 'modify','delete'];
   private idMayor: number = 0;
   constructor(private ps: TallerService, private dialog: MatDialog) { }
 
