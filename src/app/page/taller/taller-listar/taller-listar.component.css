@@ -29,6 +29,24 @@
   text-align: center;
 }
 
+.mat-column-ruc {
+  font-style: italic;
+  width: 12rem;
+  text-align: center;
+}
+
+.mat-column-modify {
+  font-style: italic;
+  width: 12rem;
+  text-align: center;
+}
+
+.mat-column-delete {
+  font-style: italic;
+  width: 12rem;
+  text-align: center;
+}
+
 .mat-header-cell {
   background-color: #303030;
   color: #ffffff;

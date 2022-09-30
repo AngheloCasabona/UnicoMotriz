@@ -1,6 +1,6 @@
 <div class="mat-headline demo-table" style="text-align: center; font-size: 4rem; padding-top: 1rem; margin-block: 2rem; font-weight: bolder; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">CLIENTES</div>
 <app-cliente-buscar></app-cliente-buscar>
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8" style="margin:auto; width:38rem;">
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8" style="margin:auto; width:60rem;">
 
   <!--- Note that these columns can be defined in any order.
         The actual rendered columns are set as a property on the row definition" -->
@@ -58,6 +58,7 @@
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
+
 <div class="example-button-container">
   <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
     routerLink="/clientes/nuevo">

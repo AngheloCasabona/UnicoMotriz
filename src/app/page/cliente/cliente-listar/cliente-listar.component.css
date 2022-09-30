@@ -48,6 +48,18 @@
   text-align: center;
 }
 
+.mat-column-accion1 {
+  font-style: italic;
+  width: 9rem;
+  text-align: center;
+}
+
+.mat-column-accion2 {
+  font-style: italic;
+  width: 9rem;
+  text-align: center;
+}
+
 .mat-header-cell {
   background-color: #2b2b2b;
   color: #ffffff;
