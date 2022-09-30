@@ -31,6 +31,7 @@ import { TallerCreaeditaComponent } from './page/taller/taller-creaedita/taller-
 import { TallerBuscarComponent } from './page/taller/taller-buscar/taller-buscar.component';
 import { TallerDialogoComponent } from './page/taller/taller-listar/taller-dialogo/taller-dialogo.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { ClienteDialogoComponent } from './page/cliente/cliente-listar/cliente-dialogo/cliente-dialogo.component';
 
 
 
@@ -57,7 +58,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     FacturaDialogoComponent,
     TallerDialogoComponent,
     FacturaBuscarComponent,
-    TallerBuscarComponent
+    TallerBuscarComponent,
+    ClienteDialogoComponent
   ],
 
   imports: [
