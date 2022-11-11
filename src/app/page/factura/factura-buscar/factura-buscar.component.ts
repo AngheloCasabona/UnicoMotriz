@@ -18,7 +18,7 @@ export class FacturaBuscarComponent implements OnInit {
     let array: Factura[] = [];
     this.facturaService.listar().subscribe(data => {
       data.forEach((element, index) => {
-        if (element.DFecha.includes(f.target.value)) {
+        if (element.dfecha.includes(f.target.value)) {
           array.push(data[index]);
         }
       });

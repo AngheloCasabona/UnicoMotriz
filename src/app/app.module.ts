@@ -1,3 +1,5 @@
+import { DetalleVentaCreaeditaComponent } from './page/detalleventa/detalleventa-creaedita/detalleventa-creaedita.component';
+import { DetalleVentaDialogoComponent } from './page/detalleventa/detalleventa-listar/detalleventa-dialogo/detalleventa-dialogo.component';
 import { ClienteCreaeditaComponent } from './page/cliente/cliente-creaedita/cliente-creaedita.component';
 import { ProductoDialogoComponent } from './page/producto/producto-listar/producto-dialogo/producto-dialogo.component';
 import { NgModule } from '@angular/core';
@@ -17,7 +19,8 @@ import { TallerComponent } from './page/taller/taller.component';
 import { TallerListarComponent } from './page/taller/taller-listar/taller-listar.component';
 import { ReservaComponent } from './page/reserva/reserva.component';
 import { ReservaListarComponent } from './page/reserva/reserva-listar/reserva-listar.component';
-
+import { DetalleVentaComponent } from './page/detalleventa/detalleventa.component';
+import { DetalleVentaListarComponent } from './page/detalleventa/detalleventa-listar/detalleventa-listar.component';
 
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
@@ -56,7 +59,10 @@ import { ProductoBuscarComponent } from './page/producto/producto-buscar/product
     ReservaComponent,
     ReservaListarComponent,
     ClienteCreaeditaComponent,
-
+    DetalleVentaComponent,
+    DetalleVentaListarComponent,
+    DetalleVentaCreaeditaComponent,
+    
     TallerCreaeditaComponent,
     FacturaComponent,
     FacturaListarComponent,
@@ -71,7 +77,8 @@ import { ProductoBuscarComponent } from './page/producto/producto-buscar/product
     productoCreaeditaComponent,
     ProductoDialogoComponent,
     ProductoBuscarComponent,
-    ProductoComponent
+    ProductoComponent,
+    DetalleVentaDialogoComponent
   ],
 
   imports: [

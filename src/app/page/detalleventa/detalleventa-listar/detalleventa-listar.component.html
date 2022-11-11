@@ -1,9 +1,6 @@
-
 <div class="mat-headline demo-table" 
-style="text-align: center; font-size: 4rem; padding-top: 1rem; margin-block: 2rem; font-weight: bolder; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">FACTURA</div>
+style="text-align: center; font-size: 4rem; padding-top: 1rem; margin-block: 2rem; font-weight: bolder; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">DetalleVenta</div>
 
-
-<app-factura-buscar></app-factura-buscar>
 
 
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" style="margin:auto; width:38rem;">
@@ -13,34 +10,38 @@ style="text-align: center; font-size: 4rem; padding-top: 1rem; margin-block: 2re
     
   <!-- Position Column -->
   
-  <ng-container matColumnDef="cfactura">
-    <th mat-header-cell *matHeaderCellDef> Codigo </th>
-    <td mat-cell *matCellDef="let element"> {{element.cfactura}} </td>
+  <ng-container matColumnDef="ccliente">
+    <th mat-header-cell *matHeaderCellDef> CCliente </th>
+    <td mat-cell *matCellDef="let element"> {{element.ccliente}} </td>
   </ng-container>
 
   <!-- Name Column -->
-  <ng-container matColumnDef="fecha">
-    <th mat-header-cell *matHeaderCellDef> Fecha </th>
-    <td mat-cell *matCellDef="let element"> {{element.dfecha}} </td>
+  <ng-container matColumnDef="ctaller">
+    <th mat-header-cell *matHeaderCellDef> CTaller </th>
+    <td mat-cell *matCellDef="let element"> {{element.ctaller}} </td>
   </ng-container>
 
   <!-- Weight Column -->
-  <ng-container matColumnDef="monto">
-    <th mat-header-cell *matHeaderCellDef> Monto </th>
-    <td mat-cell *matCellDef="let element"> {{element.monto}} </td>
+  <ng-container matColumnDef="cfactura">
+    <th mat-header-cell *matHeaderCellDef> CFactura </th>
+    <td mat-cell *matCellDef="let element"> {{element.cfactura}} </td>
   </ng-container>
 
+  <ng-container matColumnDef="tdetalle">
+    <th mat-header-cell *matHeaderCellDef> Detalles </th>
+    <td mat-cell *matCellDef="let element"> {{element.tdetalle}} </td>
+  </ng-container>
 
   <ng-container matColumnDef="acciones">
     <th mat-header-cell *matHeaderCellDef> Acciones </th>
     <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary"
-        [routerLink]="['edicion', element?.cfactura]">Actualizar</button>
+        [routerLink]="['edicion', element?.ccliente]">Actualizar</button>
     </td>
   </ng-container>
   <ng-container matColumnDef="acciones2">
     <th mat-header-cell *matHeaderCellDef> Acciones </th>
     <td mat-cell *matCellDef="let element">
-        <button mat-raised-button color="warn"(click)="confirmar(element.cfactura)">Eliminar</button>
+        <button mat-raised-button color="warn"(click)="confirmar(element.ccliente)">Eliminar</button>
     </td>
   </ng-container>
 
@@ -51,7 +52,7 @@ style="text-align: center; font-size: 4rem; padding-top: 1rem; margin-block: 2re
 <div class="example-button-container">
 
   <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
-    routerLink="/facturas/nuevo">
+    routerLink="/detalleventa/nuevo">
     <mat-icon>plus_one</mat-icon>
   </button>
 </div>

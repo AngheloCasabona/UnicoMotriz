@@ -10,15 +10,15 @@ import { FacturaDialogoComponent } from './factura-dialogo/factura-dialogo.compo
   styleUrls: ['./factura-listar.component.css']
 })
 export class FacturaListarComponent implements OnInit {
-
+  lista: Factura[] = [];
   dataSource:MatTableDataSource<Factura>=new MatTableDataSource();
-  displayedColumns:string[]=['id','fecha', 'monto', 'acciones','acciones2'];
+  displayedColumns:string[]=['cfactura','fecha', 'monto', 'acciones','acciones2'];
   private idMayor: number = 0;
 
   constructor(private fs: FacturaService,private dialog: MatDialog) { }
 
   ngOnInit(): void {
-    this.fs.listar().subscribe(data=>{this.dataSource=new MatTableDataSource (data); })
+    this.fs.listar().subscribe(data=>{this.lista=data; this.dataSource = new MatTableDataSource (data); })
     this.fs.getLista().subscribe(data => {this.dataSource = new MatTableDataSource(data);});
     this.fs.getConfirmaEliminacion().subscribe(data => { data == true? this.eliminar(this.idMayor) : false; });
 }
