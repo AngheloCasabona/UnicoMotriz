@@ -12,6 +12,9 @@ import { ReservaComponent } from './page/reserva/reserva.component';
 import { TallerCreaeditaComponent } from './page/taller/taller-creaedita/taller-creaedita.component';
 import { TallerComponent } from './page/taller/taller.component';
 import { VehiculoComponent } from './page/vehiculo/vehiculo.component';
+import { DetalleVentaComponent } from './page/detalleventa/detalleventa.component';
+import { DetalleVentaCreaeditaComponent } from './page/detalleventa/detalleventa-creaedita/detalleventa-creaedita.component';
+
 
 const routes: Routes = [
   {
@@ -48,6 +51,12 @@ const routes: Routes = [
     path: "productos", component: ProductoComponent, children:[
       {path: 'nuevo', component: productoCreaeditaComponent},
       { path: 'edicion/:id', component: productoCreaeditaComponent }
+    ]
+  },
+  {
+    path:"detalleventa", component: DetalleVentaComponent,children:[
+      {path:'nuevo', component: DetalleVentaCreaeditaComponent},
+      {path:'edicion/:id', component: DetalleVentaCreaeditaComponent}
     ]
   }
 ];

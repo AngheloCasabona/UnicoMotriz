@@ -1,0 +1,41 @@
+<div class="container">
+    <p>detalleventa-creaedita </p>
+    <h1>DetalleVenta</h1>
+  
+
+    <mat-form-field class="example-full-width">
+      <mat-label>CCliente</mat-label>
+      <input matInput placeholder="ccliente" [(ngModel)]="detalleventa.ccliente">
+    </mat-form-field>
+  
+    <br>
+  
+    <mat-form-field class="example-full-width">
+        <mat-label>CTaller</mat-label>
+        <input matInput placeholder="ctaller" [(ngModel)]="detalleventa.ctaller">
+      </mat-form-field>
+    
+      <br>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>CFactura</mat-label>
+        <input matInput placeholder="cfactura" [(ngModel)]="detalleventa.cfactura">
+      </mat-form-field>
+    
+      <br>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>TDetalle</mat-label>
+        <input matInput required placeholder="tdetalle" [(ngModel)]="detalleventa.tdetalle">
+      </mat-form-field>
+    
+   
+    <br>
+    <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+    <button mat-raised-button color="warn" routerLink="/detalleventa">Cancelar</button>
+    <p>{{mensaje}}</p>
+  
+    <br>
+  
+  </div>
+  

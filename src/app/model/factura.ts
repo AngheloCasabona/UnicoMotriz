@@ -1,5 +1,5 @@
 export class Factura{
-  id:number=0;
-  DFecha:string = "";
-  Monto:number=0;
+  cfactura:number=0;
+  dfecha:string = "";
+  monto:number=0;
 }
