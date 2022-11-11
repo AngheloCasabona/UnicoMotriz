@@ -1,13 +1,16 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { EMPTY, Subject } from 'rxjs';
+//import { environment } from 'src/environments/environment';
 import { Taller } from '../model/taller';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class TallerService {
-  url: string = "http://localhost:5000/talleres";
+  url: string = "http://localhost:8080/talleres";
+  //private url: string = `${environment.host}/talleres`
   private listaCambio = new Subject<Taller[]>()
   private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http: HttpClient) { }
@@ -24,14 +27,14 @@ export class TallerService {
     return this.listaCambio.asObservable();
   }
   modificar(taller: Taller) {
-    return this.http.put(this.url + "/" + taller.id, taller);
+    return this.http.put(this.url + "/" + taller.ctaller, taller);
   }
   listarId(id: number) {
     return this.http.get<Taller>(`${this.url}/${id}`);
   }
 
   eliminar(id: number) {
-    return this.http.delete(this.url + "/" + id);
+    return this.http.delete(`${this.url}/${id}`);
   }
   getConfirmaEliminacion() {
     return this.confirmaEliminacion.asObservable();
@@ -43,7 +46,8 @@ export class TallerService {
 
   buscar(texto: string) {
     if (texto.length != 0) {
-      return this.http.post<Taller[]>(`${this.url}/buscar`, texto.toLowerCase(), {
+      return this.http.post<Taller[]>
+      (`${this.url}/buscar`, texto.toLowerCase(), {
       });
     }
     return EMPTY;

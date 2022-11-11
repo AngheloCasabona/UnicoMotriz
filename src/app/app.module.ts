@@ -42,6 +42,9 @@ import { ProductoComponent } from './page/producto/producto.component';
 import { ProductoListarComponent } from './page/producto/producto-listar/producto-listar.component';
 import { productoCreaeditaComponent } from './page/producto/producto-creaedita/producto-creaedita.component';
 import { ProductoBuscarComponent } from './page/producto/producto-buscar/producto-buscar.component';
+import { MecanicoDialogoComponent } from './page/mecanico/mecanico-listar/mecanico-dialogo/mecanico-dialogo.component';
+import { MecanicoCreaeditaComponent } from './page/mecanico/mecanico-creaedita/mecanico-creaedita.component';
+import { MecanicoBuscarComponent } from './page/mecanico/mecanico-buscar/mecanico-buscar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -71,7 +74,10 @@ import { ProductoBuscarComponent } from './page/producto/producto-buscar/product
     productoCreaeditaComponent,
     ProductoDialogoComponent,
     ProductoBuscarComponent,
-    ProductoComponent
+    ProductoComponent,
+    MecanicoDialogoComponent,
+    MecanicoCreaeditaComponent,
+    MecanicoBuscarComponent
   ],
 
   imports: [

@@ -2,6 +2,7 @@ import { Factura } from './../model/factura';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import {Subject, EMPTY } from 'rxjs';
+//import { environment } from 'src/environments/environment';
 
 
 @Injectable({
@@ -9,6 +10,7 @@ import {Subject, EMPTY } from 'rxjs';
 })
 export class FacturaService {
   url: string = "http://localhost:5000/facturas";
+  //private url: string = `${environment.host}/facturas`
   private listaCambio = new Subject<Factura[]>()
   private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http: HttpClient) { }

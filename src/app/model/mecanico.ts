@@ -1,9 +1,9 @@
 import { Taller } from "./taller";
 
 export class Mecanico {
-  id: number = 0;
-  nameMecanico:string = "";
-  emailMecanico:string = "";
-  passwordMecanico:string = "";
+  cmecanico: number = 0;
+  nmecanico:string = "";
+  tcorreo:string = "";
+  tclave:string = "";
   taller:Taller=new Taller();
 }

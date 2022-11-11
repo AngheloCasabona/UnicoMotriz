@@ -2,11 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { Cliente } from '../model/cliente';
 import { Subject , EMPTY } from 'rxjs';
+//import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
 export class ClienteService {
-  url:string = "http://localhost:5000/clientes";
+  url:string = "http://localhost:8080/clientes";
+  //private url: string = `${environment.host}/clientes`
   private listaCambio = new Subject<Cliente[]>()
   private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http:HttpClient) { }

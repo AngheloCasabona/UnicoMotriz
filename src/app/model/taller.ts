@@ -1,7 +1,7 @@
 export class Taller {
-  id:number =0;
-  nameTaller:string = "";
-  addressTaller:string = "";
-  ruc:number = 0;
+  ctaller:number =0;
+  ntaller:string = "";
+  tdireccion:string = "";
+  cruc:number = 0;
 
 }

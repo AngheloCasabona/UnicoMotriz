@@ -12,15 +12,16 @@ import { TallerDialogoComponent } from './taller-dialogo/taller-dialogo.componen
   styleUrls: ['./taller-listar.component.css']
 })
 export class TallerListarComponent implements OnInit {
+
   dataSource:MatTableDataSource<Taller>=new MatTableDataSource();
   displayedColumns:string[]=['id','name', 'address','ruc', 'modify','delete'];
   private idMayor: number = 0;
-  constructor(private ps: TallerService, private dialog: MatDialog) { }
+  constructor(private tallerService: TallerService, private dialog: MatDialog) { }
 
   ngOnInit(): void {
-    this.ps.listar().subscribe(data=>{this.dataSource=new MatTableDataSource (data); })
-    this.ps.getLista().subscribe(data => {this.dataSource = new MatTableDataSource(data); });
-    this.ps.getConfirmaEliminacion().subscribe(data => { data == true ? this.eliminar(this.idMayor) : false; });
+    this.tallerService.listar().subscribe(data=>{this.dataSource=new MatTableDataSource (data); })
+    this.tallerService.getLista().subscribe(data => {this.dataSource = new MatTableDataSource(data); });
+    this.tallerService.getConfirmaEliminacion().subscribe(data => { data == true ? this.eliminar(this.idMayor) : false; });
 }
 confirmar(id: number) {
   this.idMayor = id;
@@ -29,9 +30,9 @@ confirmar(id: number) {
 
 
 eliminar(id: number) {
-  this.ps.eliminar(id).subscribe(() => {
-    this.ps.listar().subscribe(data => {
-      this.ps.setLista(data);/* se ejecuta la línea 27*/
+  this.tallerService.eliminar(id).subscribe(() => {
+    this.tallerService.listar().subscribe(data => {
+      this.tallerService.setLista(data);/* se ejecuta la línea 27*/
     });
   });
 

@@ -17,7 +17,7 @@ export class TallerBuscarComponent implements OnInit {
     let array: Taller[] = [];
     this.tallerService.listar().subscribe(data => {
       data.forEach((element, index) => {
-        if (element.nameTaller.includes(e.target.value)) {
+        if (element.ntaller.includes(e.target.value)) {
           array.push(data[index]);
         }
       });

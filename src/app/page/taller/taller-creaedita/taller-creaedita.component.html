@@ -1,31 +1,31 @@
 
 <div class="form">
-  <p>taller-creaedita</p>
+
   <h1>Taller</h1>
 
   <mat-form-field class="example-full-width">
     <mat-label>Id</mat-label>
-    <input matInput placeholder="id" [(ngModel)]="taller.id">
+    <input matInput placeholder="No." [(ngModel)]="taller.ctaller">
   </mat-form-field>
 
   <br>
 
   <mat-form-field class="example-full-width">
     <mat-label>Name</mat-label>
-    <input matInput required placeholder="name" [(ngModel)]="taller.nameTaller">
+    <input matInput required placeholder="name" [(ngModel)]="taller.ntaller">
 
   </mat-form-field>
 
   <br>
   <mat-form-field class="example-full-width">
     <mat-label>Address</mat-label>
-    <input type="address" matInput required placeholder="address" [(ngModel)]="taller.addressTaller">
+    <input type="address" matInput required placeholder="address" [(ngModel)]="taller.tdireccion">
   </mat-form-field>
 
   <br>
   <mat-form-field class="example-full-width">
     <mat-label>Ruc</mat-label>
-    <input type="ruc" matInput required placeholder="ruc" [(ngModel)]="taller.ruc">
+    <input type="ruc" matInput required placeholder="ruc" [(ngModel)]="taller.cruc">
   </mat-form-field>
 
 
@@ -34,4 +34,6 @@
   <button mat-raised-button color="warn" routerLink="/talleres">Cancelar</button>
   <p>{{mensaje}}</p>
 
+
+  <br>
 </div>

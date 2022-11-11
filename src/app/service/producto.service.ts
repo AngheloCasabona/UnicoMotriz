@@ -2,12 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Producto } from '../model/producto';
 import { Subject, EMPTY } from 'rxjs';
+//import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductoService {
-  url:string="http://localhost:5000/productos";
+  url:string="http://localhost:8080/productos";
+  //private url: string = `${environment.host}/productos`
   private listaCambio = new Subject<Producto[]>()
   private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http:HttpClient) { }

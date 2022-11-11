@@ -14,7 +14,7 @@ export class TallerCreaeditaComponent implements OnInit {
   mensaje: string = "";
   edicion: boolean = false;
   id: number = 0;
-  constructor(private tallerService : TallerService,private router: Router,private route: ActivatedRoute) { }
+  constructor(private tallerService : TallerService,private route: ActivatedRoute,private router: Router) { }
 
   ngOnInit(): void {
     this.route.params.subscribe((data: Params) => {
@@ -24,7 +24,7 @@ export class TallerCreaeditaComponent implements OnInit {
     });
   }
   aceptar(): void {
-    if (this.taller.nameTaller.length > 0 && this.taller.addressTaller.length > 0) {
+    if (this.taller.ntaller.length > 0 && this.taller.tdireccion.length > 0) {
       if (this.edicion) {
       this.tallerService.modificar(this.taller).subscribe(data => {
         this.tallerService.listar().subscribe(data => {
@@ -52,6 +52,7 @@ export class TallerCreaeditaComponent implements OnInit {
     if (this.edicion) {
       this.tallerService.listarId(this.id).subscribe(data => {
         this.taller = data;
+        console.log(data);
       })
     }
 

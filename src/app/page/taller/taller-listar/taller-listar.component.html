@@ -8,39 +8,39 @@
 
   <!-- Position Column -->
   <ng-container matColumnDef="id">
-    <th mat-header-cell *matHeaderCellDef> No. </th>
-    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    <th mat-header-cell *matHeaderCellDef> Codigo </th>
+    <td mat-cell *matCellDef="let element"> {{element.ctaller}} </td>
   </ng-container>
 
   <!-- Name Column -->
   <ng-container matColumnDef="name">
     <th mat-header-cell *matHeaderCellDef> Name </th>
-    <td mat-cell *matCellDef="let element"> {{element.nameTaller}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.ntaller}} </td>
   </ng-container>
 
   <!-- Weight Column -->
   <ng-container matColumnDef="address">
     <th mat-header-cell *matHeaderCellDef> Address </th>
-    <td mat-cell *matCellDef="let element"> {{element.addressTaller}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.tdireccion}} </td>
   </ng-container>
 
 
   <ng-container matColumnDef="ruc">
     <th mat-header-cell *matHeaderCellDef> Ruc </th>
-    <td mat-cell *matCellDef="let element"> {{element.ruc}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.cruc}} </td>
   </ng-container>
 
   <ng-container matColumnDef="modify">
     <th mat-header-cell *matHeaderCellDef> Modify </th>
     <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary"
-        [routerLink]="['edicion', element?.id]">Actualizar</button>    </td>
+        [routerLink]="['edicion', element.ctaller]">Actualizar</button>    </td>
 
 
   </ng-container>
   <ng-container matColumnDef="delete">
     <th mat-header-cell *matHeaderCellDef> Delete </th>
     <td mat-cell *matCellDef="let element">
-        <button mat-raised-button color="warn" (click)="confirmar(element.id)">Eliminar</button>    </td>
+        <button mat-raised-button color="warn" (click)="confirmar(element.ctaller)">Eliminar</button>    </td>
   </ng-container>
 
 

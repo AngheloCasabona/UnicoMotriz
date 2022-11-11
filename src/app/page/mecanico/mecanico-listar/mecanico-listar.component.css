@@ -1,4 +1,4 @@
-.demo-table {
+.demo-table2 {
   width: 100%;
 }
 
@@ -29,7 +29,7 @@
   text-align: center;
 }
 
-.mat-column-password {
+.mat-column-clave {
   font-style: italic;
   width: 12rem;
   text-align: center;
@@ -47,4 +47,11 @@
   font-size: 0.9rem;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.example-button-container2{
+  text-align: center;
+  /* margin: auto; */
+  max-width: auto;
+  margin-top: 15px;
 }
