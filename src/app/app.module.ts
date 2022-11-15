@@ -48,7 +48,6 @@ import { ProductoBuscarComponent } from './page/producto/producto-buscar/product
 import { MecanicoDialogoComponent } from './page/mecanico/mecanico-listar/mecanico-dialogo/mecanico-dialogo.component';
 import { MecanicoCreaeditaComponent } from './page/mecanico/mecanico-creaedita/mecanico-creaedita.component';
 import { MecanicoBuscarComponent } from './page/mecanico/mecanico-buscar/mecanico-buscar.component';
-import { VehiculoDialogoComponent } from './page/cliente/vehiculo-listar/vehiculo-dialogo/vehiculo-dialogo.component';
 import { VehiculoCreaeaditaComponent } from './page/vehiculo/vehiculo-creaeadita/vehiculo-creaeadita.component';
 import { VehiculoBuscarComponent } from './page/vehiculo/vehiculo-buscar/vehiculo-buscar.component';
 @NgModule({
@@ -88,7 +87,6 @@ import { VehiculoBuscarComponent } from './page/vehiculo/vehiculo-buscar/vehicul
     MecanicoCreaeditaComponent,
     MecanicoBuscarComponent,
     DetalleVentaDialogoComponent,
-    VehiculoDialogoComponent,
     VehiculoCreaeaditaComponent,
     VehiculoBuscarComponent
   ],

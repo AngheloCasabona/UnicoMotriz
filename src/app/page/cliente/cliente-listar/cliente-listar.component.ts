@@ -10,21 +10,16 @@ import { ClienteDialogoComponent } from './cliente-dialogo/cliente-dialogo.compo
   styleUrls: ['./cliente-listar.component.css']
 })
 export class ClienteListarComponent implements OnInit {
+  lista:Cliente[]=[];
   dataSource:MatTableDataSource<Cliente>=new MatTableDataSource();
-  displayedColumns: string[]=['id', 'nameCliente', 'emailCliente', 'claveCliente', 'telefonoCliente', 'rucCliente', 'accion1', 'accion2'];
+  displayedColumns: string[]=['ccliente', 'ncliente', 'tcorreo', 'tclave', 'ttelefono', 'cruc', 'accion1', 'accion2'];
   private idMayor: number = 0;
   constructor(private ps:ClienteService, private dialog: MatDialog) { }
 
   ngOnInit(): void {
-    this.ps.listar().subscribe(data=>{
-      this.dataSource=new MatTableDataSource(data);
-    })
-    this.ps.getLista().subscribe(data => {
-      this.dataSource = new MatTableDataSource(data);
-    });
-    this.ps.getConfirmaEliminacion().subscribe(data=>{
-      data == true ? this.eliminar(this.idMayor) : false;
-    });
+    this.ps.listar().subscribe(data=>{this.lista=data; this.dataSource=new MatTableDataSource(data);})
+    this.ps.getLista().subscribe(data => {this.dataSource = new MatTableDataSource(data);});
+    this.ps.getConfirmaEliminacion().subscribe(data=>{data == true ? this.eliminar(this.idMayor) : false;});
   }
 
   confirmar(id: number){

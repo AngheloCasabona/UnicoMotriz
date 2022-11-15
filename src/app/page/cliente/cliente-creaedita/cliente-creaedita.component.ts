@@ -25,7 +25,7 @@ export class ClienteCreaeditaComponent implements OnInit {
   }
 
   aceptar(): void {
-    if (this.cliente.nameCliente.length > 0 && this.cliente.emailCliente.length > 0 && this.cliente.claveCliente.length > 0 && this.cliente.telefonoCliente.length > 0 && this.cliente.rucCliente.length > 0) {
+    if (this.cliente.ncliente.length !> 0 && this.cliente.tcorreo.length !> 0 && this.cliente.tclave.length !> 0 && this.cliente.ttelefono.length !> 0 && this.cliente.cruc.length !> 0) {
       if(this.edicion){
         this.clienteService.modificar(this.cliente).subscribe(data => {
           this.clienteService.listar().subscribe(data =>{
