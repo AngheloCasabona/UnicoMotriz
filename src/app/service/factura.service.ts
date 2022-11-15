@@ -25,7 +25,7 @@ export class FacturaService {
     return this.listaCambio.asObservable();
   }
   modificar(factura: Factura) {
-    return this.http.put(this.url + "/" + factura.cfactura,factura);
+    return this.http.put(this.url, factura);
   }
   listarId(id: number) {
     return this.http.get<Factura>(`${this.url}/${id}`);
