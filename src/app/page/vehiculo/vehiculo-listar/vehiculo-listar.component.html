@@ -5,34 +5,38 @@
           The actual rendered columns are set as a property on the row definition" -->
 
   <!-- Position Column -->
-  <ng-container matColumnDef="codeVehiculo">
+  <ng-container matColumnDef="cVehiculo">
     <th mat-header-cell *matHeaderCellDef> Placa </th>
-    <td mat-cell *matCellDef="let element"> {{element.codeVehiculo}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.cVehiculo}} </td>
   </ng-container>
 
   <!-- Weight Column -->
-  <ng-container matColumnDef="DAno">
+  <ng-container matColumnDef="tDetalle">
     <th mat-header-cell *matHeaderCellDef> Fecha </th>
-    <td mat-cell *matCellDef="let element"> {{element.DAno}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.tDetalle}} </td>
   </ng-container>
 
     <!-- Position Column -->
-    <ng-container matColumnDef="NMarca">
+    <ng-container matColumnDef="dAno">
       <th mat-header-cell *matHeaderCellDef> Marca </th>
-      <td mat-cell *matCellDef="let element"> {{element.NMarca}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.dAno}} </td>
     </ng-container>
 
       <!-- Position Column -->
-  <ng-container matColumnDef="NModelo">
+  <ng-container matColumnDef="nMarca">
     <th mat-header-cell *matHeaderCellDef> Modelo </th>
-    <td mat-cell *matCellDef="let element"> {{element.NModelo}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.nMarca}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="nModelo">
+    <th mat-header-cell *matHeaderCellDef> Cliente </th>
+    <td mat-cell *matCellDef="let element"> {{element.nModelo}} </td>
   </ng-container>
 
   <ng-container matColumnDef="cliente">
     <th mat-header-cell *matHeaderCellDef> Cliente </th>
     <td mat-cell *matCellDef="let element"> {{element.cliente.nameCliente}} </td>
   </ng-container>
-
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>

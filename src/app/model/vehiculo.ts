@@ -1,9 +1,10 @@
 import { Cliente } from "./cliente";
 
 export class Vehiculo{
-  codeVehiculo: string = "";
-  DAno: string = "";
+  cVehiculo: string = "";
+  tDetalle: string = "";
+  dAno: string = "";
+  nMarca: string = "";
+  nModelo: string = "";
   cliente: Cliente=new Cliente();
-  NMarca: string = "";
-  NModelo: string = "";
 }
