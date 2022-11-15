@@ -1,44 +1,45 @@
-<div class="mat-headline demo-table" style="text-align: center; font-size: 4rem; padding-top: 1rem; margin-block: 2rem; font-weight: bolder; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">TALLERES</div>
+<div class="mat-headline demo-table"
+style="text-align: center; font-size: 4rem; padding-top: 1rem; margin-block: 2rem; font-weight: bolder; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">TALLERES</div>
 
 <app-taller-buscar></app-taller-buscar>
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" style="margin:auto; width:38rem;">
-  <h1>Lista de talleres</h1>
-  <!--- Note that these columns can be defined in any order.
+<!--- Note that these columns can be defined in any order.
           The actual rendered columns are set as a property on the row definition" -->
 
   <!-- Position Column -->
-  <ng-container matColumnDef="id">
+  <ng-container matColumnDef="ctaller">
     <th mat-header-cell *matHeaderCellDef> Codigo </th>
     <td mat-cell *matCellDef="let element"> {{element.ctaller}} </td>
   </ng-container>
 
   <!-- Name Column -->
-  <ng-container matColumnDef="name">
+  <ng-container matColumnDef="ntaller">
     <th mat-header-cell *matHeaderCellDef> Name </th>
     <td mat-cell *matCellDef="let element"> {{element.ntaller}} </td>
   </ng-container>
 
   <!-- Weight Column -->
-  <ng-container matColumnDef="address">
+  <ng-container matColumnDef="tdireccion">
     <th mat-header-cell *matHeaderCellDef> Address </th>
     <td mat-cell *matCellDef="let element"> {{element.tdireccion}} </td>
   </ng-container>
 
 
-  <ng-container matColumnDef="ruc">
+  <ng-container matColumnDef="cruc">
     <th mat-header-cell *matHeaderCellDef> Ruc </th>
     <td mat-cell *matCellDef="let element"> {{element.cruc}} </td>
   </ng-container>
 
-  <ng-container matColumnDef="modify">
-    <th mat-header-cell *matHeaderCellDef> Modify </th>
+  <ng-container matColumnDef="acciones">
+    <th mat-header-cell *matHeaderCellDef> Acciones </th>
     <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary"
-        [routerLink]="['edicion', element.ctaller]">Actualizar</button>    </td>
+        [routerLink]="['edicion', element?.ctaller]">Actualizar</button>
+    </td>
 
 
   </ng-container>
-  <ng-container matColumnDef="delete">
-    <th mat-header-cell *matHeaderCellDef> Delete </th>
+  <ng-container matColumnDef="acciones2">
+    <th mat-header-cell *matHeaderCellDef> Acciones </th>
     <td mat-cell *matCellDef="let element">
         <button mat-raised-button color="warn" (click)="confirmar(element.ctaller)">Eliminar</button>    </td>
   </ng-container>

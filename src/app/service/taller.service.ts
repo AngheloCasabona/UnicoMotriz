@@ -27,7 +27,7 @@ export class TallerService {
     return this.listaCambio.asObservable();
   }
   modificar(taller: Taller) {
-    return this.http.put(this.url + "/" + taller.ctaller, taller);
+    return this.http.put(this.url, taller);
   }
   listarId(id: number) {
     return this.http.get<Taller>(`${this.url}/${id}`);

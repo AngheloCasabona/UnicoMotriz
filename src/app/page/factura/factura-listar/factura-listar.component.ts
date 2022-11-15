@@ -30,11 +30,8 @@ confirmar(id: number) {
 eliminar(id: number) {
   this.fs.eliminar(id).subscribe(() => {
     this.fs.listar().subscribe(data => {
-      this.fs.setLista(data);/* se ejecuta la línea 27*/
+      this.fs.setLista(data);
     });
   });
-
 }
-
-
 }
