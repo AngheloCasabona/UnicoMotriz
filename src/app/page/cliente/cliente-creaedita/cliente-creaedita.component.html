@@ -5,39 +5,39 @@
 
   <mat-form-field class="example-full-width">
     <mat-label>Id</mat-label>
-    <input matInput placeholder="id" [(ngModel)]="cliente.id">
+    <input matInput placeholder="ccliente" [(ngModel)]="cliente.ccliente">
   </mat-form-field>
 
   <br>
 
   <mat-form-field class="example-full-width">
     <mat-label>Nombre</mat-label>
-    <input matInput required placeholder="nameCliente" [(ngModel)]="cliente.nameCliente">
+    <input matInput required placeholder="ncliente" [(ngModel)]="cliente.ncliente">
 
   </mat-form-field>
 
   <br>
   <mat-form-field class="example-full-width">
     <mat-label>Email</mat-label>
-    <input type="email" matInput required placeholder="emailCliente" [(ngModel)]="cliente.emailCliente">
+    <input type="email" matInput required placeholder="tcorreo" [(ngModel)]="cliente.tcorreo">
   </mat-form-field>
 
   <br>
   <mat-form-field class="example-full-width">
     <mat-label>Clave</mat-label>
-    <input type="text" matInput required placeholder="claveCliente" [(ngModel)]="cliente.claveCliente">
+    <input type="text" matInput required placeholder="tclave" [(ngModel)]="cliente.tclave">
   </mat-form-field>
 
   <br>
   <mat-form-field class="example-full-width">
     <mat-label>Telefono</mat-label>
-    <input type="text" matInput required placeholder="telefonoCliente" [(ngModel)]="cliente.telefonoCliente">
+    <input type="text" matInput required placeholder="ttelefono" [(ngModel)]="cliente.ttelefono">
   </mat-form-field>
 
   <br>
   <mat-form-field class="example-full-width">
     <mat-label>Ruc</mat-label>
-    <input type="text" matInput required placeholder="rucCliente" [(ngModel)]="cliente.rucCliente">
+    <input type="text" matInput required placeholder="cruc" [(ngModel)]="cliente.cruc">
   </mat-form-field>
 
   <br>
@@ -45,4 +45,5 @@
   <button mat-raised-button color="warn" routerLink="/clientes">Cancelar</button>
   <p>{{mensaje}}</p>
 
+  <br>
 </div>

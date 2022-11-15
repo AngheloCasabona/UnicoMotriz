@@ -1,8 +1,8 @@
 export class Cliente{
-  id: number = 0;
-  nameCliente: string = "";
-  emailCliente: string = "";
-  claveCliente: string = "";
-  telefonoCliente: string = "";
-  rucCliente: string = "";
+  ccliente: number = 0;
+  ncliente: string = "";
+  tcorreo: string = "";
+  tclave: string = "";
+  ttelefono: string = "";
+  cruc: string = "";
 }

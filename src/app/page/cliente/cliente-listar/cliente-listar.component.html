@@ -6,52 +6,52 @@
         The actual rendered columns are set as a property on the row definition" -->
 
   <!-- ID Column -->
-  <ng-container matColumnDef="id">
+  <ng-container matColumnDef="ccliente">
     <th mat-header-cell *matHeaderCellDef> ID </th>
-    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.ccliente}} </td>
   </ng-container>
 
   <!-- Name Column -->
-  <ng-container matColumnDef="nameCliente">
+  <ng-container matColumnDef="ncliente">
     <th mat-header-cell *matHeaderCellDef> Name </th>
-    <td mat-cell *matCellDef="let element"> {{element.nameCliente}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.ncliente}} </td>
   </ng-container>
 
   <!-- Email Column -->
-  <ng-container matColumnDef="emailCliente">
+  <ng-container matColumnDef="tcorreo">
     <th mat-header-cell *matHeaderCellDef> Email </th>
-    <td mat-cell *matCellDef="let element"> {{element.emailCliente}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.tcorreo}} </td>
   </ng-container>
 
   <!-- Clave Column -->
-  <ng-container matColumnDef="claveCliente">
+  <ng-container matColumnDef="tclave">
     <th mat-header-cell *matHeaderCellDef> Clave </th>
-    <td mat-cell *matCellDef="let element"> {{element.claveCliente}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.tclave}} </td>
   </ng-container>
 
   <!-- Telefono Column -->
-  <ng-container matColumnDef="telefonoCliente">
+  <ng-container matColumnDef="ttelefono">
     <th mat-header-cell *matHeaderCellDef> Telefono </th>
-    <td mat-cell *matCellDef="let element"> {{element.telefonoCliente}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.ttelefono}} </td>
   </ng-container>
 
   <!-- Telefono Column -->
-  <ng-container matColumnDef="rucCliente">
+  <ng-container matColumnDef="cruc">
     <th mat-header-cell *matHeaderCellDef> Ruc </th>
-    <td mat-cell *matCellDef="let element"> {{element.rucCliente}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.cruc}} </td>
   </ng-container>
 
   <ng-container matColumnDef="accion1">
     <th mat-header-cell *matHeaderCellDef> Acciones </th>
     <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary"
-        [routerLink]="['edicion', element?.id]">Actualizar</button>
+        [routerLink]="['edicion', element?.ccliente]">Actualizar</button>
     </td>
   </ng-container>
 
   <ng-container matColumnDef="accion2">
     <th mat-header-cell *matHeaderCellDef> Acciones </th>
     <td mat-cell *matCellDef="let element">
-        <button mat-raised-button color="warn" (click)="confirmar(element.id)">Eliminar</button>
+        <button mat-raised-button color="warn" (click)="confirmar(element.ccliente)">Eliminar</button>
     </td>
   </ng-container>
 

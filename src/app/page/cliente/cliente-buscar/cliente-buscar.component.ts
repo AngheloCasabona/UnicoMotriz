@@ -18,7 +18,7 @@ export class ClienteBuscarComponent implements OnInit {
     let array: Cliente[] = [];
     this.clienteService.listar().subscribe(data => {
       data.forEach((element, index) => {
-        if (element.nameCliente.includes(e.target.value)){
+        if (element.ncliente.includes(e.target.value)){
           array.push(data[index]);
         }
       });

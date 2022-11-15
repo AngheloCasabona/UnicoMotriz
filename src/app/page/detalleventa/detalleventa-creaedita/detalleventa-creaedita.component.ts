@@ -44,7 +44,7 @@ export class DetalleVentaCreaeditaComponent implements OnInit {
 
     if (this.idCliente > 0 && this.idTaller >0 && this.idFactura) {
       let dv = new Cliente();
-      dv.id= this.idCliente;
+      dv.ccliente= this.idCliente;
       this.detalleventa.ccliente=dv;
       if (this.edicion) {
       this.detalleventaService.modificar(this.detalleventa).subscribe(data => {
