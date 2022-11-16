@@ -14,33 +14,36 @@ import { VehiculoDialogoComponent } from './vehiculo-dialogo/vehiculo-dialogo.co
 export class VehiculoListarComponent implements OnInit {
   lista: Vehiculo[] = [];
   dataSource: MatTableDataSource<Vehiculo> = new MatTableDataSource();
-  displayedColumns:string[]=['cVehiculo', 'tDetalle', `dAno`, `nMarca`, `nModelo`, `cliente`];
+  displayedColumns:string[]=['cvehiculo', 'cplaca', `tdetalle`, `dano`, `nmarca`, `nmodelo`, `cliente`, `acciones`];
   private idMayor: number = 0;
-  constructor(private Vc: VehiculoService, private dialog: MatDialog) { }
+  constructor(private vehiculoService: VehiculoService, private dialog: MatDialog) { }
 
   ngOnInit(): void {
-    this.Vc.listar().subscribe(data => {
-      this.lista=data;
-      this.dataSource = new MatTableDataSource(data);});
-
-    this.Vc.getLista().subscribe(data=> {this.dataSource = new MatTableDataSource(data);
-    console.log(data);
+    this.vehiculoService.listar().subscribe(data => {
+      this.lista = data;
+      this.dataSource = new MatTableDataSource(data);
     });
-    this.Vc.getConfirmaEliminacion().subscribe(data => {
-       data == true ? this.eliminar(this.idMayor) : false; });
+
+    this.vehiculoService.getLista().subscribe(data=> {
+      this.dataSource = new MatTableDataSource(data);
+      console.log(data);
+    });
+
+    this.vehiculoService.getConfirmaEliminacion().subscribe(data => {
+      data == true ? this.eliminar(this.idMayor) : false;
+    });
   }
   confirmar(id: number) {
     this.idMayor = id;
-    this.dialog.open(VehiculoDialogoComponent );
+    this.dialog.open(VehiculoDialogoComponent);
   }
 
 
   eliminar(id: number) {
-    this.Vc.eliminar(id).subscribe(() => {
-      this.Vc.listar().subscribe(data => {
-        this.Vc.setLista(data);/* se ejecuta la línea 27*/
+    this.vehiculoService.eliminar(id).subscribe(() => {
+      this.vehiculoService.listar().subscribe(data => {
+        this.vehiculoService.setLista(data);/* se ejecuta la línea 27*/
       });
     });
-
   }
 }

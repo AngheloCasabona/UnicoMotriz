@@ -14,6 +14,7 @@ import { TallerComponent } from './page/taller/taller.component';
 import { VehiculoComponent } from './page/vehiculo/vehiculo.component';
 import { DetalleVentaComponent } from './page/detalleventa/detalleventa.component';
 import { DetalleVentaCreaeditaComponent } from './page/detalleventa/detalleventa-creaedita/detalleventa-creaedita.component';
+import { VehiculoCreaeditaComponent } from './page/vehiculo/vehiculo-creaedita/vehiculo-creaedita.component';
 
 
 const routes: Routes = [
@@ -24,6 +25,8 @@ const routes: Routes = [
     ]
   },{
     path: 'vehiculos', component: VehiculoComponent, children:[
+      { path: 'nuevo', component: VehiculoCreaeditaComponent },
+      { path: 'edicion/:id', component: VehiculoCreaeditaComponent }
 
     ]
   },{

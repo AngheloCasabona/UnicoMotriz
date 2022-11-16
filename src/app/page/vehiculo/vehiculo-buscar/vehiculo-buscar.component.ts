@@ -17,7 +17,7 @@ export class VehiculoBuscarComponent implements OnInit {
     let array: Vehiculo[] = [];
     this.vehiculoService.listar().subscribe(data => {
       data.forEach((element, index) => {
-        if (element.cVehiculo.includes(e.target.value)) {
+        if (element.cvehiculo.includes(e.target.value)) {
           array.push(data[index]);
         }
       });

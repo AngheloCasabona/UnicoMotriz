@@ -1,0 +1,57 @@
+
+<div class="forms">
+
+  <h1>Vehiculo</h1>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Id</mat-label>
+    <input matInput placeholder="id" [(ngModel)]="vehiculo.cvehiculo">
+  </mat-form-field>
+
+  <br>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Placa</mat-label>
+    <input matInput required placeholder="placa" [(ngModel)]="vehiculo.cplaca">
+
+  </mat-form-field>
+
+  <br>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Detalle</mat-label>
+    <input matInput required placeholder="detalle" [(ngModel)]="vehiculo.tdetalle">
+
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Ano</mat-label>
+    <input matInput required placeholder="ano" [(ngModel)]="vehiculo.dano">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Marca</mat-label>
+    <input matInput required placeholder="marca" [(ngModel)]="vehiculo.nmarca">
+  </mat-form-field>
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Modelo</mat-label>
+    <input matInput required placeholder="modelo" [(ngModel)]="vehiculo.nmodelo">
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label>Seleccione Cliente</mat-label>
+    <mat-select [(value)]="idClienteSeleccionado" required>
+        <mat-option *ngFor="let c of listaClientes" [value]="c.ccliente">
+            {{c.ncliente}}
+        </mat-option>
+    </mat-select>
+</mat-form-field>
+  <br>
+  <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+  <button mat-raised-button color="warn" routerLink="/vehiculos">Cancelar</button>
+</div>
+
+

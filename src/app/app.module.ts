@@ -21,7 +21,6 @@ import { ReservaComponent } from './page/reserva/reserva.component';
 import { ReservaListarComponent } from './page/reserva/reserva-listar/reserva-listar.component';
 import { DetalleVentaComponent } from './page/detalleventa/detalleventa.component';
 import { DetalleVentaListarComponent } from './page/detalleventa/detalleventa-listar/detalleventa-listar.component';
-
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import{MatIconModule} from'@angular/material/icon';
@@ -37,10 +36,6 @@ import { TallerDialogoComponent } from './page/taller/taller-listar/taller-dialo
 import { MatDialogModule } from '@angular/material/dialog';
 import { ClienteDialogoComponent } from './page/cliente/cliente-listar/cliente-dialogo/cliente-dialogo.component';
 import { ClienteBuscarComponent } from './page/cliente/cliente-buscar/cliente-buscar.component';
-
-
-
-
 import { ProductoComponent } from './page/producto/producto.component';
 import { ProductoListarComponent } from './page/producto/producto-listar/producto-listar.component';
 import { productoCreaeditaComponent } from './page/producto/producto-creaedita/producto-creaedita.component';
@@ -48,8 +43,14 @@ import { ProductoBuscarComponent } from './page/producto/producto-buscar/product
 import { MecanicoDialogoComponent } from './page/mecanico/mecanico-listar/mecanico-dialogo/mecanico-dialogo.component';
 import { MecanicoCreaeditaComponent } from './page/mecanico/mecanico-creaedita/mecanico-creaedita.component';
 import { MecanicoBuscarComponent } from './page/mecanico/mecanico-buscar/mecanico-buscar.component';
-import { VehiculoCreaeaditaComponent } from './page/vehiculo/vehiculo-creaeadita/vehiculo-creaeadita.component';
 import { VehiculoBuscarComponent } from './page/vehiculo/vehiculo-buscar/vehiculo-buscar.component';
+import { VehiculoCreaeditaComponent } from './page/vehiculo/vehiculo-creaedita/vehiculo-creaedita.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { DateAdapter, MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatSelectModule } from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
 @NgModule({
   declarations: [
     AppComponent,
@@ -67,7 +68,6 @@ import { VehiculoBuscarComponent } from './page/vehiculo/vehiculo-buscar/vehicul
     DetalleVentaComponent,
     DetalleVentaListarComponent,
     DetalleVentaCreaeditaComponent,
-    
     TallerCreaeditaComponent,
     FacturaComponent,
     FacturaListarComponent,
@@ -87,8 +87,8 @@ import { VehiculoBuscarComponent } from './page/vehiculo/vehiculo-buscar/vehicul
     MecanicoCreaeditaComponent,
     MecanicoBuscarComponent,
     DetalleVentaDialogoComponent,
-    VehiculoCreaeaditaComponent,
-    VehiculoBuscarComponent
+    VehiculoBuscarComponent,
+    VehiculoCreaeditaComponent
   ],
 
   imports: [
@@ -101,7 +101,13 @@ import { VehiculoBuscarComponent } from './page/vehiculo/vehiculo-buscar/vehicul
     MatIconModule,
     MatButtonModule,
     FormsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatToolbarModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

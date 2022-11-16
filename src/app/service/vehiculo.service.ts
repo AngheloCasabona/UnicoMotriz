@@ -20,22 +20,31 @@ export class VehiculoService {
   insertar(vehiculo: Vehiculo) {
     return this.http.post(this.url, vehiculo);
   }
-  setLista(listaNueva: Vehiculo[]) {
-    this.listaCambio.next(listaNueva);
-  }
-  getLista() {
-    return this.listaCambio.asObservable();
-  }
+
   modificar(vehiculo: Vehiculo) {
-    return this.http.put(this.url + "/" + vehiculo.cVehiculo, vehiculo);
-  }
-  listarId(id: number) {
-    return this.http.get<Vehiculo>(`${this.url}/${id}`);
+    return this.http.put(this.url, vehiculo);
   }
 
   eliminar(id: number) {
     return this.http.delete(`${this.url}/${id}`);
   }
+
+  buscar(texto: string) {
+    return this.http.post<Vehiculo[]>(`${this.url}/buscar`, texto);
+  }
+
+  listarId(id: number) {
+    return this.http.get<Vehiculo>(`${this.url}/${id}`);
+  }
+
+  getLista() {
+    return this.listaCambio.asObservable();
+  }
+
+  setLista(listaNueva: Vehiculo[]) {
+    this.listaCambio.next(listaNueva);
+  }
+
   getConfirmaEliminacion() {
     return this.confirmaEliminacion.asObservable();
   }
@@ -43,12 +52,4 @@ export class VehiculoService {
     this.confirmaEliminacion.next(estado);
   }
 
-
-  buscar(texto: string) {
-    if (texto.length != 0) {
-      return this.http.post<Vehiculo[]>(`${this.url}/buscar`, texto.toLowerCase(), {
-      });
-    }
-    return EMPTY;
-  }
 }
