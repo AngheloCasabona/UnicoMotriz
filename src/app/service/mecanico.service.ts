@@ -34,7 +34,7 @@ export class MecanicoService {
   }
 
   eliminar(id: number) {
-    return this.http.delete(`${this.url}/${id}`);
+    return this.http.delete(this.url + "/" + id);
   }
   getConfirmaEliminacion() {
     return this.confirmaEliminacion.asObservable();
