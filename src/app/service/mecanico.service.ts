@@ -9,7 +9,7 @@ import { Mecanico } from '../model/mecanico';
 })
 export class MecanicoService {
   url:string = "http://localhost:8080/mecanicos";
-  //private url: string = `${environment.host}/mecanicos`
+
   private listaCambio = new Subject<Mecanico[]>()
   private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http: HttpClient) { }
