@@ -1,6 +1,6 @@
 <div class="mat-headline demo-table" style="text-align: center; font-size: 4rem; padding-top: 1rem; margin-block: 2rem; font-weight: bolder; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">VEHICULOS</div>
-<app-vehiculo-buscar></app-vehiculo-buscar> <!--Búsqueda usando BD-->
 
+<app-vehiculo-buscar></app-vehiculo-buscar>
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" style="margin:auto; width:38rem;">
 
   <!--- Note that these columns can be defined in any order.
@@ -26,18 +26,18 @@
 
     <!-- Position Column -->
     <ng-container matColumnDef="dano">
-      <th mat-header-cell *matHeaderCellDef> Marca </th>
+      <th mat-header-cell *matHeaderCellDef> Año </th>
       <td mat-cell *matCellDef="let element"> {{element.dano}} </td>
     </ng-container>
 
       <!-- Position Column -->
   <ng-container matColumnDef="nmarca">
-    <th mat-header-cell *matHeaderCellDef> Modelo </th>
+    <th mat-header-cell *matHeaderCellDef> Marca </th>
     <td mat-cell *matCellDef="let element"> {{element.nmarca}} </td>
   </ng-container>
 
   <ng-container matColumnDef="nmodelo">
-    <th mat-header-cell *matHeaderCellDef> Cliente </th>
+    <th mat-header-cell *matHeaderCellDef> Modelo </th>
     <td mat-cell *matCellDef="let element"> {{element.nmodelo}} </td>
   </ng-container>
 
@@ -48,12 +48,17 @@
 
   <ng-container matColumnDef="acciones">
     <th mat-header-cell *matHeaderCellDef> Acciones </th>
-    <td mat-cell *matCellDef="let element"> <button mat-raised-button color="basic"
-            [routerLink]="['edicion', element.cVehiculo]">Actualizar</button>
-        <button mat-raised-button color="warn" (click)="confirmar(element.cVehiculo)">Eliminar</button>
+    <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary"
+        [routerLink]="['edicion', element?.cvehiculo]">Actualizar</button>
     </td>
   </ng-container>
 
+  <ng-container matColumnDef="acciones2">
+    <th mat-header-cell *matHeaderCellDef> Acciones </th>
+    <td mat-cell *matCellDef="let element">
+        <button mat-raised-button color="warn"(click)="confirmar(element.cvehiculo)">Eliminar</button>
+    </td>
+  </ng-container>
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>

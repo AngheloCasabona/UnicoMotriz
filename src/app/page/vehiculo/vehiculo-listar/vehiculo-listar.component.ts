@@ -14,7 +14,7 @@ import { VehiculoDialogoComponent } from './vehiculo-dialogo/vehiculo-dialogo.co
 export class VehiculoListarComponent implements OnInit {
   lista: Vehiculo[] = [];
   dataSource: MatTableDataSource<Vehiculo> = new MatTableDataSource();
-  displayedColumns:string[]=['cvehiculo', 'cplaca', `tdetalle`, `dano`, `nmarca`, `nmodelo`, `cliente`, `acciones`];
+  displayedColumns:string[]=['cvehiculo', 'cplaca', `tdetalle`, `dano`, `nmarca`, `nmodelo`, `cliente`, `acciones`, `acciones2`];
   private idMayor: number = 0;
   constructor(private vehiculoService: VehiculoService, private dialog: MatDialog) { }
 
