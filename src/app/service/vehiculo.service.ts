@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { EMPTY, Subject } from 'rxjs';
-//import { environment } from 'src/environments/environment';
+import { environment } from 'src/environments/environment';
 import { Vehiculo } from '../model/vehiculo';
 
 @Injectable({
@@ -9,7 +9,7 @@ import { Vehiculo } from '../model/vehiculo';
 })
 export class VehiculoService {
   //private url: string = `${environment.host}/vehiculos`
-  url:string="http://localhost:8080/vehiculos";
+  private url:string="http://localhost:8080/vehiculos";
   private listaCambio = new Subject<Vehiculo[]>()
   private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http:HttpClient) { }
