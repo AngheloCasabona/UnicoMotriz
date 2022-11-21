@@ -2,6 +2,7 @@ import { Factura } from './../../../model/factura';
 import { Component, OnInit } from '@angular/core';
 import { FacturaService } from 'src/app/service/factura.service';
 import { ActivatedRoute, Params, Router } from '@angular/router';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-factura-creaedita',
@@ -11,7 +12,10 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 export class FacturaCreaeditaComponent implements OnInit {
 
   factura: Factura= new Factura();
+  fechaSeleccionada: Date = moment().add(-1, 'days').toDate();
   mensaje: string = "";
+  maxFecha: Date = moment().add(-1, 'days').toDate();
+  mensaje1: string = "";
   edicion: boolean = false;
   id: number = 0;
   constructor(private facturaService : FacturaService,private router: Router,private route: ActivatedRoute) { }
@@ -25,7 +29,8 @@ export class FacturaCreaeditaComponent implements OnInit {
   }
   aceptar(): void {
 
-    if (this.factura.dfecha.length  !> 0) {
+    if (this.factura.monto  !> 0) {
+      this.factura.dfecha = moment(this.fechaSeleccionada).format('YYYY-MM-DDTHH:mm:ss');
       if (this.edicion) {
       this.facturaService.modificar(this.factura).subscribe(data => {
         this.facturaService.listar().subscribe(data => {
