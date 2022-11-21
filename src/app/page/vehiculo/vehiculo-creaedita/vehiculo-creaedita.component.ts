@@ -4,6 +4,7 @@ import { Cliente } from 'src/app/model/cliente';
 import { Vehiculo } from 'src/app/model/vehiculo';
 import { ClienteService } from 'src/app/service/cliente.service';
 import { VehiculoService } from 'src/app/service/vehiculo.service';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-vehiculo-creaedita',
@@ -16,7 +17,9 @@ export class VehiculoCreaeditaComponent implements OnInit {
   edicion: boolean = false;
   listaClientes: Cliente[] = [];
   idClienteSeleccionado: number = 0;
+  fechaSeleccionada: Date = moment().add(-1, 'days').toDate();
   mensaje: string = "";
+  maxFecha: Date = moment().add(-1, 'days').toDate();
   mensaje1: string = "";
   constructor(private vehiculoService:VehiculoService, private router:Router, private route:ActivatedRoute, private clienteService: ClienteService) { }
 
@@ -34,6 +37,7 @@ export class VehiculoCreaeditaComponent implements OnInit {
       let c = new Cliente();
       c.ccliente = this.idClienteSeleccionado;
       this.vehiculo.cliente = c;
+      this.vehiculo.dano = moment(this.fechaSeleccionada).format('YYYY-MM-DDTHH:mm:ss');
       if (this.edicion) {
         this.vehiculoService.modificar(this.vehiculo).subscribe(() => {
           this.vehiculoService.listar().subscribe(data => {
