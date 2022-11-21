@@ -13,7 +13,7 @@ export class VehiculoBuscarComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  buscar(e: any) {
+  buscar(v: any) {
     // let array: Vehiculo[] = [];
     // this.vehiculoService.listar().subscribe(data => {
     //   data.forEach((element, index) => {
@@ -24,8 +24,14 @@ export class VehiculoBuscarComponent implements OnInit {
     //   this.vehiculoService.setLista(array);
     // })
 
-    this.vehiculoService.buscar(e.target.value).subscribe(data=>{
-      this.vehiculoService.setLista(data);
-    });
+    let array: Vehiculo[] = [];
+    this.vehiculoService.listar().subscribe(data => {
+      data.forEach((element, index) => {
+        if (element.cplaca.includes(v.target.value)) {
+          array.push(data[index]);
+        }
+      });
+      this.vehiculoService.setLista(array);
+    })
   }
 }

@@ -31,7 +31,12 @@ export class VehiculoService {
   }
 
   buscar(texto: string) {
-    return this.http.post<Vehiculo[]>(`${this.url}/buscar`, texto);
+    // return this.http.post<Vehiculo[]>(`${this.url}/buscar`, texto);
+    if (texto.length != 0) {
+      return this.http.post<Vehiculo[]>(`${this.url}/buscar`, texto.toLowerCase(), {
+      });
+    }
+    return EMPTY;
   }
 
   listarId(id: number) {
