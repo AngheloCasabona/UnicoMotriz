@@ -1,3 +1,5 @@
+import { TallerService } from './../../../service/taller.service';
+import { Taller } from './../../../model/taller';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { Mecanico } from 'src/app/model/mecanico';
@@ -11,11 +13,13 @@ import { MecanicoService } from 'src/app/service/mecanico.service';
 export class MecanicoCreaeditaComponent implements OnInit {
 
   mecanico:Mecanico=new Mecanico();
-  mensaje:string="";
-  edicion:boolean=false;
   id:number=0;
+  edicion:boolean=false;
+  listaTalleres:Taller[]=[];
+  TallerSeleccionado:number=0;
+  mensaje:string="";
 
-  constructor(private mecanicoService:MecanicoService, private router:Router, private route:ActivatedRoute) { }
+  constructor(private mecanicoService:MecanicoService, private router:Router, private route:ActivatedRoute, private tallerService:TallerService) { }
 
   ngOnInit(): void {
     this.route.params.subscribe((data: Params) => {
@@ -23,23 +27,29 @@ export class MecanicoCreaeditaComponent implements OnInit {
       this.edicion = data['id'] != null;
       this.init();
     });
+    this.tallerService.listar().subscribe(data=>{this.listaTalleres=data});
   }
   aceptar(): void {
-    if (this.mecanico.nmecanico.length > 0 && this.mecanico.tcorreo.length > 0) {
+    if (this.mecanico.nmecanico.length > 0 && this.TallerSeleccionado> 0) {
+      let t = new Taller();
+      t.ctaller=this.TallerSeleccionado;
+      this.mecanico.taller=t;
+
       if (this.edicion) {
       this.mecanicoService.modificar(this.mecanico).subscribe(data => {
         this.mecanicoService.listar().subscribe(data => {
           this.mecanicoService.setLista(data);
-        })
-      })
+        });
+      });
 
     } else {
 
       this.mecanicoService.insertar(this.mecanico).subscribe(data => {
         this.mecanicoService.listar().subscribe(data => {
           this.mecanicoService.setLista(data);
-        })
-      })
+        });
+      }
+      ,err=> {console.log(err);});
     }
 
       this.router.navigate(['mecanicos']);
@@ -53,7 +63,9 @@ export class MecanicoCreaeditaComponent implements OnInit {
     if (this.edicion) {
       this.mecanicoService.listarId(this.id).subscribe(data => {
         this.mecanico = data;
-      })
+        console.log(data);
+       this.TallerSeleccionado=data.taller.ctaller;
+      });
     }
 
   }
