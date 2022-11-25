@@ -57,6 +57,7 @@ import { FacturaFechaComponent } from './page/factura/factura-fecha/factura-fech
 import { DetalleventaClienteComponent } from './page/detalleventa/detalleventa-cliente/detalleventa-cliente.component';
 import { ClienteQueryoneComponent } from './page/cliente/cliente-queryone/cliente-queryone.component';
 import { VehiculoQueryoneComponent } from './page/vehiculo/vehiculo-queryone/vehiculo-queryone.component';
+import { TallerDireccionComponent } from './page/taller/taller-direccion/taller-direccion.component';
 
 @NgModule({
   declarations: [
@@ -100,7 +101,8 @@ import { VehiculoQueryoneComponent } from './page/vehiculo/vehiculo-queryone/veh
     FacturaFechaComponent,
     DetalleventaClienteComponent,
     ClienteQueryoneComponent,
-    VehiculoQueryoneComponent
+    VehiculoQueryoneComponent,
+    TallerDireccionComponent
   ],
 
   imports: [

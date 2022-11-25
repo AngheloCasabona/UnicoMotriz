@@ -20,6 +20,7 @@ import { DetalleVentaCreaeditaComponent } from './page/detalleventa/detalleventa
 import { VehiculoCreaeditaComponent } from './page/vehiculo/vehiculo-creaedita/vehiculo-creaedita.component';
 import { ClienteQueryoneComponent } from './page/cliente/cliente-queryone/cliente-queryone.component';
 import { VehiculoQueryoneComponent } from './page/vehiculo/vehiculo-queryone/vehiculo-queryone.component';
+import { TallerDireccionComponent } from './page/taller/taller-direccion/taller-direccion.component';
 
 
 const routes: Routes = [
@@ -39,7 +40,8 @@ const routes: Routes = [
   },{
     path: 'talleres', component: TallerComponent, children:[
       { path: 'nuevo', component: TallerCreaeditaComponent },
-      { path: 'edicion/:id', component: TallerCreaeditaComponent }
+      { path: 'edicion/:id', component: TallerCreaeditaComponent },
+      { path: 'direccion',component:TallerDireccionComponent}
     ]
   },
 

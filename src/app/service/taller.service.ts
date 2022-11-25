@@ -52,4 +52,7 @@ export class TallerService {
     }
     return EMPTY;
   }
+  buscarDireccion(){
+    return this.http.get<Taller[]>(`${this.url}/buscardireccion`);
+  }
 }
