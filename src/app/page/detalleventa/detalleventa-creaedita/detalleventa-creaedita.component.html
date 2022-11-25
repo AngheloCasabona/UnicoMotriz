@@ -1,0 +1,62 @@
+<div class="container">
+    <p>detalleventa-creaedita </p>
+    <h1>DetalleVenta</h1>
+  
+
+    <mat-form-field class="example-full-width">
+      <mat-label>ID</mat-label>
+      <input matInput placeholder="codigo" [(ngModel)]="detalleventa.cdetalle">
+    </mat-form-field>
+  
+    <br>
+
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Seleccione Cliente</mat-label>
+      <mat-select [(value)]="idCliente" required>
+          <mat-option *ngFor="let c of listaCliente" [value]="c.ccliente">
+              {{c.ncliente}}
+          </mat-option>
+      </mat-select>
+  </mat-form-field>
+    <br>
+  
+
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Seleccione Taller</mat-label>
+      <mat-select [(value)]="idTaller" required>
+          <mat-option *ngFor="let t of listaTaller" [value]="t.ctaller">
+              {{t.ntaller}}
+          </mat-option>
+      </mat-select>
+  </mat-form-field>
+    <br>
+
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Seleccione Factura</mat-label>
+      <mat-select [(value)]="idFactura" required>
+          <mat-option *ngFor="let f of listaFactura" [value]="f.cfactura">
+              {{f.cfactura}}
+          </mat-option>
+      </mat-select>
+  </mat-form-field>
+    <br>
+
+
+      <mat-form-field class="example-full-width">
+        <mat-label>TDetalle</mat-label>
+        <input matInput required placeholder="tdetalle" [(ngModel)]="detalleventa.tdetalle">
+      </mat-form-field>
+    
+   
+    <br>
+    <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+    <button mat-raised-button color="warn" routerLink="/detalleventa">Cancelar</button>
+    <p>{{mensaje}}</p>
+  
+    <br>
+  
+  </div>
+  

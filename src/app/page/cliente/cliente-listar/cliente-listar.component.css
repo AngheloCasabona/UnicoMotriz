@@ -1,0 +1,78 @@
+.demo-table {
+  width: 100%;
+}
+
+
+.mat-cell{
+  background-color: #fcfcfc;
+
+}
+.mat-column-id {
+  width: 32px;
+  border-right: 1px solid currentColor;
+  padding-right: 24px;
+  text-align: center;
+  font-weight: bolder;
+  background-color: #cfcfcf;
+}
+
+.mat-column-nameCliente {
+  padding-left: 16px;
+  font-size: 16px;
+  width: 9rem;
+  text-align: center;
+}
+
+.mat-column-emailCliente {
+  font-style: italic;
+  width: 12rem;
+  text-align: center;
+}
+
+.mat-column-claveCliente {
+  font-style: italic;
+  width: 10rem;
+  text-align: center;
+  visibility:visible;
+}
+
+.mat-column-telefonoCliente {
+  font-style: italic;
+  width: 9rem;
+  text-align: center;
+}
+
+.mat-column-rucCliente {
+  font-style: italic;
+  width: 9rem;
+  text-align: center;
+}
+
+.mat-column-accion1 {
+  font-style: italic;
+  width: 9rem;
+  text-align: center;
+}
+
+.mat-column-accion2 {
+  font-style: italic;
+  width: 9rem;
+  text-align: center;
+}
+
+.mat-header-cell {
+  background-color: #2b2b2b;
+  color: #ffffff;
+  font-style: normal;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.example-button-container{
+  text-align: center;
+  /* margin: auto; */
+  max-width: auto;
+  margin-top: 15px;
+}

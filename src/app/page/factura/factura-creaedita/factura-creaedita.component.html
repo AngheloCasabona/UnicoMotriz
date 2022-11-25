@@ -1,0 +1,35 @@
+<div class="container">
+  <p>factura-creaedita </p>
+  <h1>FACTURA</h1>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>ID</mat-label>
+    <input matInput placeholder="codigo" [(ngModel)]="factura.cfactura">
+  </mat-form-field>
+
+  <br>
+
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label>Fecha de factura</mat-label>
+    <input matInput [matDatepicker]="picker" [(ngModel)]="fechaSeleccionada" [max]="maxFecha">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <br>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Monto</mat-label>
+    <input type="monto" matInput required placeholder="monto" [(ngModel)]="factura.monto">
+  </mat-form-field>
+
+  <br>
+  <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+  <button mat-raised-button color="warn" routerLink="/facturas">Cancelar</button>
+  <p>{{mensaje}}</p>
+
+  <br>
+
+</div>

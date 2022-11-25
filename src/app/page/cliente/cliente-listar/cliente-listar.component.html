@@ -1,0 +1,75 @@
+<div class="mat-headline demo-table" style="text-align: center; font-size: 4rem; padding-top: 1rem; margin-block: 2rem; font-weight: bolder; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">CLIENTES</div>
+<app-cliente-buscar></app-cliente-buscar>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8" style="margin:auto; width:60rem;">
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- ID Column -->
+  <ng-container matColumnDef="ccliente">
+    <th mat-header-cell *matHeaderCellDef> ID </th>
+    <td mat-cell *matCellDef="let element"> {{element.ccliente}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="ncliente">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.ncliente}} </td>
+  </ng-container>
+
+  <!-- Email Column -->
+  <ng-container matColumnDef="tcorreo">
+    <th mat-header-cell *matHeaderCellDef> Email </th>
+    <td mat-cell *matCellDef="let element"> {{element.tcorreo}} </td>
+  </ng-container>
+
+  <!-- Clave Column -->
+  <ng-container matColumnDef="tclave">
+    <th mat-header-cell *matHeaderCellDef> Clave </th>
+    <td mat-cell *matCellDef="let element"> {{element.tclave}} </td>
+  </ng-container>
+
+  <!-- Telefono Column -->
+  <ng-container matColumnDef="ttelefono">
+    <th mat-header-cell *matHeaderCellDef> Telefono </th>
+    <td mat-cell *matCellDef="let element"> {{element.ttelefono}} </td>
+  </ng-container>
+
+  <!-- Telefono Column -->
+  <ng-container matColumnDef="cruc">
+    <th mat-header-cell *matHeaderCellDef> Ruc </th>
+    <td mat-cell *matCellDef="let element"> {{element.cruc}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="accion1">
+    <th mat-header-cell *matHeaderCellDef> Acciones </th>
+    <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary"
+        [routerLink]="['edicion', element?.ccliente]">Actualizar</button>
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="accion2">
+    <th mat-header-cell *matHeaderCellDef> Acciones </th>
+    <td mat-cell *matCellDef="let element">
+        <button mat-raised-button color="warn" (click)="confirmar(element.ccliente)">Eliminar</button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<div class="example-button-container">
+  <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
+    routerLink="/clientes/nuevo">
+    <mat-icon>plus_one</mat-icon>
+  </button>
+</div>
+
+
+<div class="example-button-container">
+  <button mat-raised-button color="primary" aria-label="Example icon button with a plus one icon"
+    routerLink="/clientes/fuerzacodigo">
+    <span>query</span>
+  </button>
+</div>

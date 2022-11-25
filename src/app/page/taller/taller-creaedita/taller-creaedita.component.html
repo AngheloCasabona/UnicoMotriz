@@ -1,0 +1,39 @@
+
+<div class="form">
+
+  <h1>Taller</h1>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Id</mat-label>
+    <input matInput placeholder="codigo" [(ngModel)]="taller.ctaller">
+  </mat-form-field>
+
+  <br>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Nombre</mat-label>
+    <input matInput required placeholder="name" [(ngModel)]="taller.ntaller">
+
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Direccion</mat-label>
+    <input matInput required placeholder="direccion" [(ngModel)]="taller.tdireccion">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Ruc</mat-label>
+    <input matInput required placeholder="ruc" [(ngModel)]="taller.cruc">
+  </mat-form-field>
+
+
+  <br>
+  <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+  <button mat-raised-button color="warn" routerLink="/talleres">Cancelar</button>
+  <p>{{mensaje}}</p>
+
+
+  <br>
+</div>
