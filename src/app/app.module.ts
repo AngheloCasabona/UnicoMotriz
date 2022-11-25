@@ -55,6 +55,8 @@ import { CustomDateAdapter } from './custom-adapter';
 import { DetalleventaBuscarComponent } from './page/detalleventa/detalleventa-buscar/detalleventa-buscar.component';
 import { FacturaFechaComponent } from './page/factura/factura-fecha/factura-fecha.component';
 import { DetalleventaClienteComponent } from './page/detalleventa/detalleventa-cliente/detalleventa-cliente.component';
+import { ClienteQueryoneComponent } from './page/cliente/cliente-queryone/cliente-queryone.component';
+import { VehiculoQueryoneComponent } from './page/vehiculo/vehiculo-queryone/vehiculo-queryone.component';
 
 @NgModule({
   declarations: [
@@ -96,7 +98,9 @@ import { DetalleventaClienteComponent } from './page/detalleventa/detalleventa-c
     VehiculoCreaeditaComponent,
     DetalleventaBuscarComponent,
     FacturaFechaComponent,
-    DetalleventaClienteComponent
+    DetalleventaClienteComponent,
+    ClienteQueryoneComponent,
+    VehiculoQueryoneComponent
   ],
 
   imports: [

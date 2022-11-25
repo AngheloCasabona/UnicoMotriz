@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { EMPTY, Subject } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { RespuestaClienteVehiculo } from '../model/RespuestaClienteVehiculo';
 import { Vehiculo } from '../model/vehiculo';
 
 @Injectable({
@@ -58,4 +59,7 @@ export class VehiculoService {
     this.confirmaEliminacion.next(estado);
   }
 
+  buscarPlacaCliente() {
+    return this.http.get<RespuestaClienteVehiculo[]>(`${this.url}/placacliente`);
+  }
 }

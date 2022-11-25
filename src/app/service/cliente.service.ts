@@ -47,4 +47,8 @@ export class ClienteService {
     }
     return EMPTY;
   }
+
+  fuerzaCodigo() {
+    return this.http.get<Cliente[]>(`${this.url}/fuerzacodigo`);
+    }
 }
