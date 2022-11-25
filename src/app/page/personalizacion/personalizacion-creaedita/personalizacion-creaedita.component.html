@@ -1,0 +1,40 @@
+
+<div class="forms">
+
+    <h1>Personalizacion</h1>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Id</mat-label>
+      <input matInput placeholder="id" [(ngModel)]="personalizacion.cpersonalizacion">
+    </mat-form-field>
+  
+    <br>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Name</mat-label>
+      <input matInput required placeholder="name" [(ngModel)]="personalizacion.npersonalizacion">
+  
+    </mat-form-field>
+  
+    <br>
+    <mat-form-field class="example-full-width">
+      <mat-label>Costo</mat-label>
+      <input matInput required placeholder="costo" [(ngModel)]="personalizacion.m_costo">
+    </mat-form-field>
+  
+      <mat-form-field class="example-full-width">
+      <mat-label>Seleccione Vehiculo</mat-label>
+     <mat-select [(value)]="VehiculoSeleccionado" required>
+     <mat-option *ngFor="let t of listaVehiculos"[value]="t.cvehiculo">
+      {{t.cplaca}}
+     </mat-option>
+     </mat-select>
+    </mat-form-field>
+  
+    <br>
+    <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+    <button mat-raised-button color="warn" routerLink="/mecanicos">Cancelar</button>
+    <p>{{mensaje}}</p>
+  
+  </div>
+

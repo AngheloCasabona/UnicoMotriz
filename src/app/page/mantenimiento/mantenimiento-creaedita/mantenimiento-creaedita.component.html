@@ -1,0 +1,47 @@
+<div class="forms">
+
+    <h1>Mantenimiento</h1>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Id</mat-label>
+      <input matInput placeholder="id" [(ngModel)]="mantenimiento.cmantenimiento">
+    </mat-form-field>
+  
+    <br>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Name</mat-label>
+      <input matInput required placeholder="name" [(ngModel)]="mantenimiento.nmantenimiento">
+  
+    </mat-form-field>
+  
+    <br>
+    <mat-form-field class="example-full-width">
+      <mat-label>Costo</mat-label>
+      <input matInput required placeholder="costo" [(ngModel)]="mantenimiento.m_costo">
+    </mat-form-field>
+  
+      <mat-form-field class="example-full-width">
+      <mat-label>Seleccione Vehiculo</mat-label>
+     <mat-select [(value)]="VehiculoSeleccionado" required>
+     <mat-option *ngFor="let t of listaVehiculos"[value]="t.cvehiculo">
+      {{t.cplaca}}
+     </mat-option>
+     </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Seleccione Mecanico</mat-label>
+     <mat-select [(value)]="MecanicoSeleccionado" required>
+     <mat-option *ngFor="let m of listaMecanicos"[value]="m.cmecanico">
+      {{m.cmecanico}}
+     </mat-option>
+     </mat-select>
+    </mat-form-field>
+  
+    <br>
+    <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+    <button mat-raised-button color="warn" routerLink="/mecanicos">Cancelar</button>
+    <p>{{mensaje}}</p>
+  
+  </div>

@@ -1,3 +1,4 @@
+import { MantenimientoComponent } from './page/mantenimiento/mantenimiento.component';
 import { DetalleVentaCreaeditaComponent } from './page/detalleventa/detalleventa-creaedita/detalleventa-creaedita.component';
 import { DetalleVentaDialogoComponent } from './page/detalleventa/detalleventa-listar/detalleventa-dialogo/detalleventa-dialogo.component';
 import { ClienteCreaeditaComponent } from './page/cliente/cliente-creaedita/cliente-creaedita.component';
@@ -52,6 +53,15 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { CustomDateAdapter } from './custom-adapter';
+import { PersonalizacionComponent } from './page/personalizacion/personalizacion.component';
+import { PersonalizacionBuscarComponent } from './page/personalizacion/personalizacion-buscar/personalizacion-buscar.component';
+import { PersonalizacionCreaeditaComponent } from './page/personalizacion/personalizacion-creaedita/personalizacion-creaedita.component';
+import { PersonalizacionListarComponent } from './page/personalizacion/personalizacion-listar/personalizacion-listar.component';
+import { MantenimientoListarComponent } from './page/mantenimiento/mantenimiento-listar/mantenimiento-listar.component';
+import { MantenimientoCreaeditaComponent } from './page/mantenimiento/mantenimiento-creaedita/mantenimiento-creaedita.component';
+import { MantenimientoBuscarComponent } from './page/mantenimiento/mantenimiento-buscar/mantenimiento-buscar.component';
+import { MantenimientoDialogoComponent } from './page/mantenimiento/mantenimiento-listar/mantenimiento-dialogo/mantenimiento-dialogo.component';
+import { PersonalizacionDialogoComponent } from './page/personalizacion/personalizacion-listar/personalizacion-dialogo/personalizacion-dialogo.component';
 
 
 @NgModule({
@@ -91,7 +101,17 @@ import { CustomDateAdapter } from './custom-adapter';
     MecanicoBuscarComponent,
     DetalleVentaDialogoComponent,
     VehiculoBuscarComponent,
-    VehiculoCreaeditaComponent
+    VehiculoCreaeditaComponent,
+    PersonalizacionComponent,
+    PersonalizacionBuscarComponent,
+    PersonalizacionCreaeditaComponent,
+    PersonalizacionListarComponent,
+    MantenimientoListarComponent,
+    MantenimientoCreaeditaComponent,
+    MantenimientoBuscarComponent,
+    MantenimientoDialogoComponent,
+    PersonalizacionDialogoComponent,
+    MantenimientoComponent
   ],
 
   imports: [

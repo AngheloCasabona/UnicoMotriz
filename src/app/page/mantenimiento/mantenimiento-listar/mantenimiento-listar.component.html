@@ -1,0 +1,62 @@
+<div class="mat-headline demo-table2" style="text-align: center; font-size: 4rem; padding-top: 1rem; margin-block: 2rem; font-weight: bolder; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">MANTENIMIENTOS</div>
+<app-mantenimiento-buscar></app-mantenimiento-buscar>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8" style="margin:auto; width:38rem;">
+  <h1>Lista de Personalizacion</h1>
+  <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> No. </th>
+    <td mat-cell *matCellDef="let element"> {{element.cmantenimiento}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.nmantenimiento}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="costo">
+    <th mat-header-cell *matHeaderCellDef> Costo </th>
+    <td mat-cell *matCellDef="let element"> {{element.m_costo}} </td>
+  </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="cvehiculo">
+        <th mat-header-cell *matHeaderCellDef> No. Vehiculo </th>
+        <td mat-cell *matCellDef="let element"> {{element.vehiculo.cvehiculo}} </td>
+      </ng-container>
+
+    <!-- Weight Column -->
+  <ng-container matColumnDef="cmecanico">
+    <th mat-header-cell *matHeaderCellDef> No. Mecanico </th>
+    <td mat-cell *matCellDef="let element"> {{element.mecanico.cmecanico}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Actualizar ">
+    <th mat-header-cell *matHeaderCellDef> Actualizar  </th>
+    <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary"
+        [routerLink]="['edicion', element?.cmantenimiento]">Actualizar</button>
+    </td>
+  </ng-container>
+  <ng-container matColumnDef="Eliminar">
+    <th mat-header-cell *matHeaderCellDef> Eliminar </th>
+    <td mat-cell *matCellDef="let element">
+        <button mat-raised-button color="warn" (click)="confirmar(element.cmantenimiento)">Eliminar</button>
+
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+<div class="example-button-container2">
+  <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
+    routerLink="/mantenimientos/nuevo">
+    <mat-icon>plus_one</mat-icon>
+  </button>
+</div>

@@ -1,3 +1,7 @@
+import { PersonalizacionCreaeditaComponent } from './page/personalizacion/personalizacion-creaedita/personalizacion-creaedita.component';
+import { PersonalizacionComponent } from './page/personalizacion/personalizacion.component';
+import { MantenimientoCreaeditaComponent } from './page/mantenimiento/mantenimiento-creaedita/mantenimiento-creaedita.component';
+import { MantenimientoComponent } from './page/mantenimiento/mantenimiento.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ClienteCreaeditaComponent } from './page/cliente/cliente-creaedita/cliente-creaedita.component';
@@ -60,6 +64,18 @@ const routes: Routes = [
     path:"detalleventa", component: DetalleVentaComponent,children:[
       {path:'nuevo', component: DetalleVentaCreaeditaComponent},
       {path:'edicion/:id', component: DetalleVentaCreaeditaComponent}
+    ]
+  },
+  {
+    path: 'mantenimientos', component: MantenimientoComponent, children:[
+      { path: 'nuevo', component: MantenimientoCreaeditaComponent },
+      { path: 'edicion/:id', component: MantenimientoCreaeditaComponent }
+    ]
+  },
+  {
+    path: 'personalizaciones', component: PersonalizacionComponent, children:[
+      { path: 'nuevo', component: PersonalizacionCreaeditaComponent },
+      { path: 'edicion/:id', component: PersonalizacionCreaeditaComponent }
     ]
   }
 ];
