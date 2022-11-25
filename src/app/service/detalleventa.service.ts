@@ -45,4 +45,8 @@ export class DetalleVentaService {
   setConfirmaEliminacion(estado: Boolean) {
     this.confirmaEliminacion.next(estado);
   }
+
+  buscarClienteDetalle(){
+    return this.http.get<DetalleVenta[]>(`${this.url}/buscarclientedetalle`);
+  }
 }

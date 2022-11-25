@@ -53,7 +53,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { CustomDateAdapter } from './custom-adapter';
 import { DetalleventaBuscarComponent } from './page/detalleventa/detalleventa-buscar/detalleventa-buscar.component';
-
+import { FacturaFechaComponent } from './page/factura/factura-fecha/factura-fecha.component';
+import { DetalleventaClienteComponent } from './page/detalleventa/detalleventa-cliente/detalleventa-cliente.component';
 
 @NgModule({
   declarations: [
@@ -93,7 +94,9 @@ import { DetalleventaBuscarComponent } from './page/detalleventa/detalleventa-bu
     DetalleVentaDialogoComponent,
     VehiculoBuscarComponent,
     VehiculoCreaeditaComponent,
-    DetalleventaBuscarComponent
+    DetalleventaBuscarComponent,
+    FacturaFechaComponent,
+    DetalleventaClienteComponent
   ],
 
   imports: [

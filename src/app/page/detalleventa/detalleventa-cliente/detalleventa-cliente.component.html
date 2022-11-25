@@ -1,0 +1,64 @@
+<div class="mat-headline demo-table"
+style="text-align: center; font-size: 4rem; padding-top: 1rem; margin-block: 2rem; font-weight: bolder; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">DETALLE-CLIENTE</div>
+
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8" style="margin:auto; width:38rem;">
+
+    <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+  
+<!--     <ng-container matColumnDef="ccliente">
+      <th mat-header-cell *matHeaderCellDef> CCliente </th>
+      <td mat-cell *matCellDef="let element"> {{element.cliente.ccliente}} </td>
+    </ng-container>
+  
+ 
+    <ng-container matColumnDef="ttelefono">
+      <th mat-header-cell *matHeaderCellDef> Telefono </th>
+      <td mat-cell *matCellDef="let element"> {{element.cliente.ttelefono}} </td>
+    </ng-container>
+ 
+    <ng-container matColumnDef="tcorreo">
+      <th mat-header-cell *matHeaderCellDef> Correo </th>
+      <td mat-cell *matCellDef="let element"> {{element.cliente.tcorreo}} </td>
+    </ng-container>
+
+      <ng-container matColumnDef="tdetalle">
+        <th mat-header-cell *matHeaderCellDef> Detalle </th>
+        <td mat-cell *matCellDef="let element"> {{element.tdetalle}} </td>
+      </ng-container> -->
+      
+      <ng-container matColumnDef="cdetalle">
+        <th mat-header-cell *matHeaderCellDef> CDetalle </th>
+        <td mat-cell *matCellDef="let element"> {{element.cdetalle}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="cliente">
+        <th mat-header-cell *matHeaderCellDef> CCliente </th>
+        <td mat-cell *matCellDef="let element"> {{element.cliente.ncliente}} </td>
+      </ng-container>
+    
+      <!-- Name Column -->
+      <ng-container matColumnDef="taller">
+        <th mat-header-cell *matHeaderCellDef> CTaller </th>
+        <td mat-cell *matCellDef="let element"> {{element.taller.ntaller}} </td>
+      </ng-container>
+    
+      <!-- Weight Column -->
+      <ng-container matColumnDef="cfactura">
+        <th mat-header-cell *matHeaderCellDef> CFactura </th>
+        <td mat-cell *matCellDef="let element"> {{element.cfactura.cfactura}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="tdetalle">
+        <th mat-header-cell *matHeaderCellDef> Detalles </th>
+        <td mat-cell *matCellDef="let element"> {{element.tdetalle}} </td>
+      </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  
+  

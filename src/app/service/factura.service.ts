@@ -47,4 +47,8 @@ export class FacturaService {
     }
     return EMPTY;
   }
+
+  buscarFecha(){
+    return this.http.get<Factura[]>(`${this.url}/buscarfacturafecha`);
+  }
 }

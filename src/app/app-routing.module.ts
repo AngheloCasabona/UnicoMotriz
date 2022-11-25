@@ -1,3 +1,6 @@
+import { DetalleventaClienteComponent } from './page/detalleventa/detalleventa-cliente/detalleventa-cliente.component';
+import { FacturaFechaComponent } from './page/factura/factura-fecha/factura-fecha.component';
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ClienteCreaeditaComponent } from './page/cliente/cliente-creaedita/cliente-creaedita.component';
@@ -39,7 +42,8 @@ const routes: Routes = [
  {
     path:"facturas", component: FacturaComponent, children:[
       { path: 'nuevo', component: FacturaCreaeditaComponent },
-      { path: 'edicion/:id', component: FacturaCreaeditaComponent }
+      { path: 'edicion/:id', component: FacturaCreaeditaComponent },
+      { path: 'fecha', component: FacturaFechaComponent }
     ]
   }, {
     path:'mecanicos',component: MecanicoComponent,children:[
@@ -59,7 +63,8 @@ const routes: Routes = [
   {
     path:"detalleventa", component: DetalleVentaComponent,children:[
       {path:'nuevo', component: DetalleVentaCreaeditaComponent},
-      {path:'edicion/:id', component: DetalleVentaCreaeditaComponent}
+      {path:'edicion/:id', component: DetalleVentaCreaeditaComponent},
+      {path:'cliente', component: DetalleventaClienteComponent}
     ]
   }
 ];
