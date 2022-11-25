@@ -1,7 +1,7 @@
 import { Cliente } from "./cliente";
 
 export class Vehiculo{
-  cvehiculo: string = "";
+  cvehiculo: number = 0;
   cplaca: string = "";
   tdetalle: string = "";
   dano: string = "";
