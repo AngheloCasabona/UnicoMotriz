@@ -12,14 +12,15 @@ import { DetalleVentaDialogoComponent } from './detalleventa-dialogo/detallevent
 })
 export class DetalleVentaListarComponent implements OnInit {
 
+  lista: DetalleVenta[]=[];
     dataSource:MatTableDataSource<DetalleVenta>=new MatTableDataSource();
-  displayedColumns:string[]=['ccliente','ctaller', 'cfactura', 'tdetalle', 'acciones','acciones2'];
+  displayedColumns:string[]=['cdetalle','cliente','taller', 'cfactura', 'tdetalle', 'acciones','acciones2'];
   private idMayor: number = 0;
 
   constructor(private dvs: DetalleVentaService,private dialog: MatDialog) { }
 
   ngOnInit(): void {
-    this.dvs.listar().subscribe(data=>{this.dataSource=new MatTableDataSource (data); })
+    this.dvs.listar().subscribe(data=>{this.lista=data; this.dataSource=new MatTableDataSource (data); })
     this.dvs.getLista().subscribe(data => {this.dataSource = new MatTableDataSource(data);});
     this.dvs.getConfirmaEliminacion().subscribe(data => { data == true? this.eliminar(this.idMayor) : false; });
 }

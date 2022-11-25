@@ -52,6 +52,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { CustomDateAdapter } from './custom-adapter';
+import { DetalleventaBuscarComponent } from './page/detalleventa/detalleventa-buscar/detalleventa-buscar.component';
 
 
 @NgModule({
@@ -91,7 +92,8 @@ import { CustomDateAdapter } from './custom-adapter';
     MecanicoBuscarComponent,
     DetalleVentaDialogoComponent,
     VehiculoBuscarComponent,
-    VehiculoCreaeditaComponent
+    VehiculoCreaeditaComponent,
+    DetalleventaBuscarComponent
   ],
 
   imports: [

@@ -9,11 +9,15 @@
 
   <br>
 
-  <mat-form-field class="example-full-width">
-    <mat-label>Fecha</mat-label>
-    <input matInput required placeholder="fecha" [(ngModel)]="factura.dfecha">
-
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label>Fecha de factura</mat-label>
+    <input matInput [matDatepicker]="picker" [(ngModel)]="fechaSeleccionada" [max]="maxFecha">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>
+
+  <br>
 
   <br>
   <mat-form-field class="example-full-width">

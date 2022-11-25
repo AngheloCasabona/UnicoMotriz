@@ -42,12 +42,18 @@ export class DetalleVentaCreaeditaComponent implements OnInit {
   }
   aceptar(): void {
 
-    if (this.idCliente > 0 && this.idTaller >0 && this.idFactura) {
-      let dv = new Cliente();
-      dv.ccliente= this.idCliente;
-      this.detalleventa.ccliente=dv;
+    if (this.idCliente > 0 && this.idTaller >0 && this.idFactura >0 ) {
+      let dvc = new Cliente();
+      dvc.ccliente= this.idCliente;
+      this.detalleventa.cliente=dvc;
+      let dvt = new Taller();
+      dvt.ctaller= this.idTaller;
+      this.detalleventa.taller=dvt;
+      let dvf = new Factura();
+      dvf.cfactura= this.idFactura;
+      this.detalleventa.cfactura=dvf;
       if (this.edicion) {
-      this.detalleventaService.modificar(this.detalleventa).subscribe(data => {
+      this.detalleventaService.modificar(this.detalleventa).subscribe(() => {
         this.detalleventaService.listar().subscribe(data => {
           this.detalleventaService.setLista(data);
         })
@@ -55,7 +61,7 @@ export class DetalleVentaCreaeditaComponent implements OnInit {
 
     } else {
 
-      this.detalleventaService.insertar(this.detalleventa).subscribe(data => {
+      this.detalleventaService.insertar(this.detalleventa).subscribe(() => {
         this.detalleventaService.listar().subscribe(data => {
           this.detalleventaService.setLista(data);
         })
@@ -74,7 +80,11 @@ export class DetalleVentaCreaeditaComponent implements OnInit {
     if (this.edicion) {
       this.detalleventaService.listarId(this.id).subscribe(data => {
         this.detalleventa = data;
-      })
+        console.log(data);
+        this.idCliente = data.cliente.ccliente;
+        this.idTaller =data.taller.ctaller;
+        this.idFactura = data.cfactura.cfactura;
+      });
     }
 
   }

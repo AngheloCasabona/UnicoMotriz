@@ -26,8 +26,8 @@ export class DetalleVentaService {
   getLista() {
     return this.listaCambio.asObservable();
   }
-  modificar(DetalleVenta: DetalleVenta) {
-    return this.http.put(this.url + "/" + DetalleVenta.ccliente,DetalleVenta);
+  modificar(detalleventa: DetalleVenta) {
+    return this.http.put(this.url, detalleventa);
   }
   buscar(texto: string) {
 
