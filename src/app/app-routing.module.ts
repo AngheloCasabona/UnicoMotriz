@@ -15,18 +15,22 @@ import { VehiculoComponent } from './page/vehiculo/vehiculo.component';
 import { DetalleVentaComponent } from './page/detalleventa/detalleventa.component';
 import { DetalleVentaCreaeditaComponent } from './page/detalleventa/detalleventa-creaedita/detalleventa-creaedita.component';
 import { VehiculoCreaeditaComponent } from './page/vehiculo/vehiculo-creaedita/vehiculo-creaedita.component';
+import { ClienteQueryoneComponent } from './page/cliente/cliente-queryone/cliente-queryone.component';
+import { VehiculoQueryoneComponent } from './page/vehiculo/vehiculo-queryone/vehiculo-queryone.component';
 
 
 const routes: Routes = [
   {
     path: 'clientes', component: ClienteComponent, children:[
       { path: 'nuevo', component: ClienteCreaeditaComponent },
-      { path: 'edicion/:id', component: ClienteCreaeditaComponent }
+      { path: 'edicion/:id', component: ClienteCreaeditaComponent },
+      { path: 'fuerzacodigo', component: ClienteQueryoneComponent }
     ]
   },{
     path: 'vehiculos', component: VehiculoComponent, children:[
       { path: 'nuevo', component: VehiculoCreaeditaComponent },
-      { path: 'edicion/:id', component: VehiculoCreaeditaComponent }
+      { path: 'edicion/:id', component: VehiculoCreaeditaComponent },
+      { path: 'placacliente', component: VehiculoQueryoneComponent }
 
     ]
   },{
@@ -36,7 +40,7 @@ const routes: Routes = [
     ]
   },
 
- {
+  {
     path:"facturas", component: FacturaComponent, children:[
       { path: 'nuevo', component: FacturaCreaeditaComponent },
       { path: 'edicion/:id', component: FacturaCreaeditaComponent }

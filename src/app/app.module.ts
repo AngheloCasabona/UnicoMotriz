@@ -52,7 +52,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { CustomDateAdapter } from './custom-adapter';
-
+import { ClienteQueryoneComponent } from './page/cliente/cliente-queryone/cliente-queryone.component';
+import { VehiculoQueryoneComponent } from './page/vehiculo/vehiculo-queryone/vehiculo-queryone.component';
 
 @NgModule({
   declarations: [
@@ -91,7 +92,9 @@ import { CustomDateAdapter } from './custom-adapter';
     MecanicoBuscarComponent,
     DetalleVentaDialogoComponent,
     VehiculoBuscarComponent,
-    VehiculoCreaeditaComponent
+    VehiculoCreaeditaComponent,
+    ClienteQueryoneComponent,
+    VehiculoQueryoneComponent
   ],
 
   imports: [
